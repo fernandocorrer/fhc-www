@@ -7,14 +7,14 @@ highlighter:      rouge
 excerpt_separator: <!--more-->
 
 # Config for your profile.
-title:            Friday Theme            # Site title
-name:             Friday Theme            # Your name
-avatar:           /theme/img/avatar.jpg   # Path to an avatar image
+title:            FHC Webpage            # Site title
+name:             Fernando Correr            # Your name
+avatar:           /theme/img/fhc_avatar.jpg   # Path to an avatar image
 
 # The theme uses the baseurl throughout, which is useful for running the entire
 # site under a subdir, like for this GitHub Pages deployment as a project site.
 # Use "" when runnign the site out of the root of a domain.
-baseurl: "/friday-theme"
+baseurl: "/fhc-www"
 
 # Add a directory to hold misc pages, just to keep the root directory clean.
 include: ["_pages", "_portfolio"]
@@ -64,6 +64,12 @@ defaults:
     values:
       show_profile: false
       layout: defaults/project
+  -
+    scope:
+      path: "tutorials"
+    values:
+      show_profile: true
+      layout: defaults/tutorial
   -
     scope:
       path: "list"

@@ -4,10 +4,12 @@
 - title: About
   href: about.html
 
-- title: Posts
+- title: Trainings
   href: list/posts.html
 
-- title: Documentation
-  href: list/projects.html
+#- title: Documentation
+#  href: list/projects.html
 
+#- title: Trainings
+#  href: list/trainings.html
 
