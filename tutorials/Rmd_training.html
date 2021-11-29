@@ -236,7 +236,7 @@
 <div id="introduction---markdown" class="section level1">
 <h1>Introduction - Markdown</h1>
 <p>Markdown is one of the markup languages along with HTML, XML and TeX. A markup language is deemed as a syntax for annotating a document where formatting is distinguishable from the textual content. That can be done by <code>tags</code>, that can be named elements (<code>&lt;b&gt;bold&lt;/b&gt;</code>) or by ASCII punctuation marks and other non-letter symbols.</p>
-<p>Markdown is defined as a text-to-HTML conversion tool based on the formatting syntax and the software tool to convert text to HTML. It was created in 2004 by John Gruber and Aaron Swartz, is considered a lightweight markup language. Its main advantage is having a comprehensive syntax, meaning that the plain text document is easily understandable, facilitating reading and writing.</p>
+<p>Markdown is defined as a text-to-HTML conversion tool based on the formatting syntax and the software tool to convert text to HTML. It was created in 2004 by John Gruber and Aaron Swartz and is classified a lightweight markup language. Its main advantage is having a comprehensive syntax, meaning that the plain text document is easily understandable, facilitating reading and writing.</p>
 <pre><code># Heading with markdown
 ## Heading 2 with markdown
 
@@ -256,7 +256,7 @@
 <p>The next step is to install the <code>rmarkdown</code> package:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># From CRAN</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;rmarkdown&quot;</span>)</span></code></pre></div>
-<p>For generating pdf documents, you will also need to install <a href="https://www.latex-project.org/get/">LaTeX</a> and its dependencies in your computer. There second option is to install TinyTex <a href="https://bookdown.org/yihui/rmarkdown/installation.html#ref-R-tinytex">Xie 2021</a> - a portable and lightweight LaTeX distribution, that can be installed in multiple platforms:</p>
+<p>For generating pdf documents, you will also need to install <a href="https://www.latex-project.org/get/">LaTeX</a> and its dependencies in your computer. There second option is to install TinyTex (<a href="https://bookdown.org/yihui/rmarkdown/installation.html#ref-R-tinytex">Xie 2021</a>) - a portable and lightweight LaTeX distribution, that can be installed in multiple platforms:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;tinytex&#39;</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()  <span class="co"># install TinyTeX</span></span></code></pre></div>
 </div>
@@ -276,7 +276,7 @@ output: pdf_document
 <p>Please delete anything below the metadata in your <code>Rmd</code> document! We are going to build it together.</p>
 <div id="text-context" class="section level2">
 <h2>Text context</h2>
-<p>The body of the document, in Markdown syntax, can be organized following the metadata.</p>
+<p>The body of the document, in Markdown syntax, can be organized after the metadata.</p>
 <pre><code>---
 title: &quot;Research Design - R Markdown training&quot;
 author: &quot;Author&quot;
@@ -291,11 +291,11 @@ This is my first R Markdown document.</code></pre>
 </div>
 <div id="basic-syntax" class="section level1">
 <h1>Basic syntax</h1>
-<p>The syntax used in R Markdown is the Pandoc’s Markdown. Here we will describe the most common syntax elements for beginners in Markdown.</p>
+<p>The syntax used in R Markdown is the Pandoc’s Markdown. Here we will describe the most common syntax elements for beginners.</p>
 <div id="inline" class="section level2">
 <h2>Inline</h2>
 <p>Refers to formatting of strings that are in the the paragraph: <em>italic</em>, <em>bold</em>, <em>subscript</em>, <em>superscript</em>, <em>hyperlinks</em>, <em>images</em>, <em>footnotes</em> and <em>code</em>. We are going to put the string between special characters.</p>
-<p>For italics and bold, we can use asterisks (<code>*</code>) or underscores (<code>~</code>):</p>
+<p>For italics and bold, we can use asterisks (<code>*</code>) or underscores (<code>_</code>):</p>
 <pre><code>*italics* or _italics_
 **bold** or __bold__</code></pre>
 <p>Subscript and superscripts by tildes (<code>~</code>) and carets (<code>^</code>):</p>
@@ -371,7 +371,7 @@ checked task</li>
 <div id="math-expressions" class="section level2">
 <h2>Math expressions</h2>
 <p>In R Markdown the mathematical expressions are written as in LaTeX. We just need to put the expression between dollar signs <code>$</code>:</p>
-<pre><code>$y = \beta_{0} + \beta_{i} + \gamma_{j} + (\beta\gamma)_{ij}$</code></pre>
+<pre><code>$y_{ij} = \beta_{0} + \beta_{i} + \gamma_{j} + (\beta\gamma)_{ij}$</code></pre>
 <p>Other math environments can be used:</p>
 <pre><code>$\begin{bmatrix} y_{11} \\
 y_{12} \\
@@ -474,7 +474,7 @@ y_{22}
 </table>
 <div id="controlling-the-outputs" class="section level2">
 <h2>Controlling the outputs</h2>
-<p>We can control the outputs of the chunks using arguments inside the curling braces <code>```{r OPTION}</code>. Among the options, we can control the width and height of the figure, align the plot, evaluate the chunk and also hide it.</p>
+<p>We can control the outputs of the chunks using arguments inside the curling brackets <code>```{r OPTION}</code>. Among the options, we can control the width and height of the figure, align the plot, evaluate the chunk and also hide it.</p>
 <p><strong>Evaluate the code</strong></p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="in">```{r eval=FALSE}</span></span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="in">cat(&quot;I will not be evaluated!&quot;)</span></span>
