@@ -199,7 +199,10 @@
       <ul>
       <li><a href="#why-use-r-markdown">Why use R Markdown?</a></li>
       </ul></li>
-      <li><a href="#installation---r-markdown">Installation - R Markdown</a></li>
+      <li><a href="#installation---r-markdown">Installation - R Markdown</a>
+      <ul>
+      <li><a href="#latex">LaTeX</a></li>
+      </ul></li>
       <li><a href="#first-r-markdown-document">First R Markdown document</a>
       <ul>
       <li><a href="#text-context">Text context</a></li>
@@ -259,6 +262,10 @@
 <p>For generating pdf documents, you will also need to install <a href="https://www.latex-project.org/get/">LaTeX</a> and its dependencies in your computer. There second option is to install TinyTex (<a href="https://bookdown.org/yihui/rmarkdown/installation.html#ref-R-tinytex">Xie 2021</a>) - a portable and lightweight LaTeX distribution, that can be installed in multiple platforms:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&#39;tinytex&#39;</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()  <span class="co"># install TinyTeX</span></span></code></pre></div>
+<div id="latex" class="section level2">
+<h2>LaTeX</h2>
+<p>We had problems to generate the <strong>pdf</strong> output without installing LaTeX. To install it, go to the <a href="https://www.latex-project.org/get/">LaTeX website</a> and install any of the distributions available for your operating system (i.e., MacTex for Mac OS, TeX Live for Linux, and MiKTeX for Windows).</p>
+</div>
 </div>
 <div id="first-r-markdown-document" class="section level1">
 <h1>First R Markdown document</h1>
