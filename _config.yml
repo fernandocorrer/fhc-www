@@ -24,7 +24,7 @@ sass:
   sass_dir: theme/_sass
   style: compressed
 
-# Turn the projects into a collection.
+# Turn the projects/training into a collection.
 collections:
   projects:
     output: true
@@ -33,6 +33,10 @@ collections:
   portfolio:
     output: true
     title: portfolio
+    permalink: /:collection/:name.html
+  training:
+    output: true
+    title: training
     permalink: /:collection/:name.html
 
 defaults:
