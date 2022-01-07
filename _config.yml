@@ -48,10 +48,10 @@ defaults:
       show_profile: true
   -
     scope:
-      path: "_posts"
+      path: "_training"
     values:
       show_profile: false
-      layout: defaults/post
+      layout: defaults/training
   -
     scope:
       path: "_portfolio"
