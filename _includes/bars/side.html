@@ -8,8 +8,12 @@
     </div>
 {% endif %}
 
-{% if page.show_tags %}
-    {% include components/all-tags.html %}
+{% if page.show_train_tags %}
+    {% include components/train-tags.html %}
+{% endif %}
+
+{% if page.show_post_tags %}
+    {% include components/post-tags.html %}
 {% endif %}
 
 {% if page.show_skills %}
@@ -21,6 +25,9 @@
 {% endif %}
 
 {% if page.path contains '_training' %}
-    {% include components/post-meta.html %}
+    {% include components/train-meta.html %}
 {% endif %}
 
+{% if page.path contains '_posts' %}
+    {% include components/post-meta.html %}
+{% endif %}

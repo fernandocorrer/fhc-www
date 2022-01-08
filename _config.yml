@@ -58,6 +58,12 @@ defaults:
       layout: defaults/training
   -
     scope:
+      path: "_posts"
+    values:
+      show_profile: false
+      layout: defaults/posts
+  -
+    scope:
       path: "_portfolio"
     values:
       show_profile: false
