@@ -38,6 +38,10 @@ collections:
     output: true
     title: training
     permalink: /:collection/:name.html
+  class:
+    output: true
+    title: class
+    permalink: /:collection/:name.html
 
 defaults:
 # Turn the profile sidebar on for all pages by default, except for the
@@ -56,6 +60,12 @@ defaults:
     values:
       show_profile: false
       layout: defaults/training
+  -
+    scope:
+      path: "_class"
+    values:
+      show_profile: false
+      layout: defaults/class
   -
     scope:
       path: "_posts"
