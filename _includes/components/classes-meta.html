@@ -9,7 +9,7 @@
                     {%include entypo/price-tag.svg %}
                 </span>
                 {% for tag in page.tags %}
-                    <a href="{{ site.baseurl }}{% link list/class.html %}#{{ tag | slugify }}"
+                    <a href="{{ site.baseurl }}{% link list/classes.html %}#{{ tag | slugify }}"
                        class="bg-white border rounded p-1 mr-2 mb-2 d-inline-block">
                         {{ tag }}
                     </a>
@@ -19,7 +19,7 @@
                 <span class="icon grey mr-1">
                     {% include entypo/arrow-left.svg %}
                 </span>
-                <a href="{{ site.baseurl }}{% link list/class.html %}">Back to all classes</a>
+                <a href="{{ site.baseurl }}{% link list/classes.html %}">Back to all classes</a>
             </div>
         </div>
     </div>

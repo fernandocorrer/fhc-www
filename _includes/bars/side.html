@@ -12,6 +12,10 @@
     {% include components/train-tags.html %}
 {% endif %}
 
+{% if page.show_classes_tags %}
+    {% include components/classes-tags.html %}
+{% endif %}
+
 {% if page.show_post_tags %}
     {% include components/post-tags.html %}
 {% endif %}
@@ -26,6 +30,10 @@
 
 {% if page.path contains '_training' %}
     {% include components/train-meta.html %}
+{% endif %}
+
+{% if page.path contains '_classes' %}
+    {% include components/classes-meta.html %}
 {% endif %}
 
 {% if page.path contains '_posts' %}

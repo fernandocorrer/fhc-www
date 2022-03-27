@@ -38,9 +38,9 @@ collections:
     output: true
     title: training
     permalink: /:collection/:name.html
-  class:
+  classes:
     output: true
-    title: class
+    title: classes
     permalink: /:collection/:name.html
 
 defaults:
@@ -62,10 +62,10 @@ defaults:
       layout: defaults/training
   -
     scope:
-      path: "_class"
+      path: "_classes"
     values:
       show_profile: false
-      layout: defaults/class
+      layout: defaults/classes
   -
     scope:
       path: "_posts"
