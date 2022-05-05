@@ -1,0 +1,60 @@
+
+/* -----  Title page ----- */
+
+slides > slide.title-slide {
+  background: #1c4e9dff;
+}
+
+slides > slide.title-slide p {
+  color: white;
+}
+
+slides > slide.title-slide hgroup h1,
+slides > slide.title-slide hgroup h2 {
+  color: white;
+}
+
+
+/* Logo - gdbar 
+ - Position right
+ - No background in gdbar
+ - Appropriate size */
+aside.gdbar {
+  top: 15px;
+  left: initial;
+  right: 15px;
+  background: none;
+}
+
+.gdbar img {
+  width: 350px !important;
+  height: 100px !important;
+  margin: 0px 00px;
+}
+
+/* -----  Headers ----- */
+
+h1 {
+  color: #1c4e9dff;
+}
+
+h2 {
+  color: #1c4e9dff;
+}
+
+h3 {
+  color: #515151;
+}
+
+/* -----  Bold syntax ----- */
+strong {
+  color: #fab80aff;
+}
+
+.MSUblue strong {
+  color: #1c4e9dff;
+}
+
+.MSUyellow strong {
+  color: #fab80aff;
+}
