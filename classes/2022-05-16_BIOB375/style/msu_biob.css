@@ -58,3 +58,73 @@ strong {
 .MSUyellow strong {
   color: #fab80aff;
 }
+
+/* -----  Inverse ----- */
+
+slides > slide.dark {
+    background:#515151 !important;
+}
+
+article.inverse { 
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  background:none;
+  background-color: #fab80aff;
+  text-shadow: 0 0 5px #333;
+  color: #1c4e9dff;
+  }
+
+/*
+slides > slide > article.inverse {
+  text-align: center;
+  vertical-align: middle;
+  background:none;
+  background-color: #fab80aff;
+  text-shadow: 0 0 5px #333;
+  color: #1c4e9dff;
+}
+
+.inverse hgroup {
+  bottom: 100px;
+}
+
+.inverse hgroup h1 {
+font-size: 65px;
+line-height: 1.4;
+letter-spacing: -3px;
+color: #515151;
+}
+
+.thank-you-slide {
+background: #4387fd !important;
+color: white;
+}
+
+
+
+.inverse hgroup h2 {
+font-size: 34px;
+color: darkgrey;
+font-weight: inherit;
+}
+
+.inverse hgroup p {
+font-size: 20px;
+color: #797979;
+line-height: 1.3;
+margin-top: 2em;
+}
+
+*/
+
+/*slides > slide.inverse:after {
+  text-align: center;
+  vertical-align: middle;
+  background:none;
+  background-color: #fab80aff;
+  text-shadow: 0 0 5px #333;
+  color: #1c4e9dff;
+}*/
+
+
