@@ -1,0 +1,130 @@
+
+/* -----  Title page ----- */
+
+slides > slide.title-slide {
+  background: #1c4e9dff;
+}
+
+slides > slide.title-slide p {
+  color: white;
+}
+
+slides > slide.title-slide hgroup h1,
+slides > slide.title-slide hgroup h2 {
+  color: white;
+}
+
+
+/* Logo - gdbar 
+ - Position right
+ - No background in gdbar
+ - Appropriate size */
+aside.gdbar {
+  top: 15px;
+  left: initial;
+  right: 15px;
+  background: none;
+}
+
+.gdbar img {
+  width: 350px !important;
+  height: 100px !important;
+  margin: 0px 00px;
+}
+
+/* -----  Headers ----- */
+
+h1 {
+  color: #1c4e9dff;
+}
+
+h2 {
+  color: #1c4e9dff;
+}
+
+h3 {
+  color: #515151;
+}
+
+/* -----  Bold syntax ----- */
+strong {
+  color: #fab80aff;
+}
+
+.MSUblue strong {
+  color: #1c4e9dff;
+}
+
+.MSUyellow strong {
+  color: #fab80aff;
+}
+
+/* -----  Inverse ----- */
+
+slides > slide.dark {
+    background:#515151 !important;
+}
+
+article.inverse { 
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  background:none;
+  background-color: #fab80aff;
+  text-shadow: 0 0 5px #333;
+  color: #1c4e9dff;
+  }
+
+/*
+slides > slide > article.inverse {
+  text-align: center;
+  vertical-align: middle;
+  background:none;
+  background-color: #fab80aff;
+  text-shadow: 0 0 5px #333;
+  color: #1c4e9dff;
+}
+
+.inverse hgroup {
+  bottom: 100px;
+}
+
+.inverse hgroup h1 {
+font-size: 65px;
+line-height: 1.4;
+letter-spacing: -3px;
+color: #515151;
+}
+
+.thank-you-slide {
+background: #4387fd !important;
+color: white;
+}
+
+
+
+.inverse hgroup h2 {
+font-size: 34px;
+color: darkgrey;
+font-weight: inherit;
+}
+
+.inverse hgroup p {
+font-size: 20px;
+color: #797979;
+line-height: 1.3;
+margin-top: 2em;
+}
+
+*/
+
+/*slides > slide.inverse:after {
+  text-align: center;
+  vertical-align: middle;
+  background:none;
+  background-color: #fab80aff;
+  text-shadow: 0 0 5px #333;
+  color: #1c4e9dff;
+}*/
+
+

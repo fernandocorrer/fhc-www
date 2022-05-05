@@ -1,0 +1,115 @@
+/* ----- Title slide ----- */
+
+.title-slide {
+  background-image: url("./MSU-PSPP-logo.png");
+  background-position: 95% 9%;
+  background-size: 200px;
+  background-color: #1c4e9dff;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+  color: white;
+}
+
+/* H1 fonts */
+.title-slide h1 {
+  padding-top: 250px;
+  font-weight: normal;
+  font-size: 70px;
+  text-align: left;
+  text-shadow: none;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+
+
+/* H2 fonts */
+.title-slide h2 {
+  font-size: 35px;
+  text-align: left;
+  text-shadow: none;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+/* H3 fonts */
+.title-slide h3 {
+  font-size: 28px;
+  font-weight: normal;
+  text-align: left;
+  text-shadow: none;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1;
+}
+
+/* Remove slide count */
+.title-slide .remark-slide-number {
+  text-shadow: none;
+  display: none;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~*/
+/* SECTION DIVIDERS */
+/*~~~~~~~~~~~~~~~~~~*/
+
+/* section divider green */
+.title-slide-section-green {
+  background-color: #00533C;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+/* section divider green H1 fonts */
+.title-slide-section-green h1, .title-slide-section-green h2, .title-slide-section-green h3, .title-slide-section-green p {
+  color: #fff;
+}
+
+/* section divider grey */
+.title-slide-section-grey {
+  background-color: #515151;
+  padding-left: 100px;  /* delete this for 4:3 aspect ratio */
+}
+
+/* section divider grey H1 fonts */
+.title-slide-section-grey h1, .title-slide-section-grey h2, .title-slide-section-grey h3 {
+  color: #fff;
+}
+
+/* -----  Headers ----- */
+
+h1 {
+  color: #1c4e9dff;
+}
+
+h2 {
+  color: #1c4e9dff;
+}
+
+h3 {
+  color: #515151;
+}
+
+/* -----  Bold syntax ----- */
+strong {
+  color: #fab80aff;
+}
+
+.MSUblue strong {
+  color: #1c4e9dff;
+}
+
+/* ----- Section inverse color ----- */
+.sec-inverse {
+  background-color: #fab80aff;
+  color: #fab80aff;
+  text-shadow: 0 0 5px #333;
+}
+.sec-inverse  h1, .sec-inverse  h2, .sec-inverse  h3 {
+  color: #1c4e9dff;
+}
+
+/* No slide count */
+.sec-inverse  .remark-slide-number {
+  display: none;
+}
+
+/* ----- Fonts ----- */
