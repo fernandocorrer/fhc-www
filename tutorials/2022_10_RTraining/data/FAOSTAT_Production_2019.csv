@@ -1,0 +1,80 @@
+Domain.Code	Domain	Area.Code..FAO.	Area	Element.Code	Element	Item.Code..FAO.	Item	Year.Code	Year	Unit	Value	Flag	Flag.Description	REGION
+QCL	Crops and livestock products	7	Angola	5510	Production	656	Coffee, green	2019	2019	tonnes	16961	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	23	Belize	5510	Production	656	Coffee, green	2019	2019	tonnes	88	Im	FAO data based on imputation methodology	South America
+QCL	Crops and livestock products	53	Benin	5510	Production	656	Coffee, green	2019	2019	tonnes	42	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	19	Bolivia	5510	Production	656	Coffee, green	2019	2019	tonnes	24841		Official data	South America
+QCL	Crops and livestock products	21	Brazil	5510	Production	656	Coffee, green	2019	2019	tonnes	3009402		Official data	South America
+QCL	Crops and livestock products	29	Burundi	5510	Production	656	Coffee, green	2019	2019	tonnes	14059		Official data	Africa
+QCL	Crops and livestock products	35	Cape Verde	5510	Production	656	Coffee, green	2019	2019	tonnes	0		Official data	Africa
+QCL	Crops and livestock products	115	Cambodia	5510	Production	656	Coffee, green	2019	2019	tonnes	384	Im	FAO data based on imputation methodology	Asia
+QCL	Crops and livestock products	32	Cameroon	5510	Production	656	Coffee, green	2019	2019	tonnes	28058	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	37	Central African Republic	5510	Production	656	Coffee, green	2019	2019	tonnes	10129	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	351	China	5510	Production	656	Coffee, green	2019	2019	tonnes	120000	A	Aggregate, may include official, semi-official, estimated or calculated data	Asia
+QCL	Crops and livestock products	214	Taiwan	5510	Production	656	Coffee, green	2019	2019	tonnes	0	Im	FAO data based on imputation methodology	Asia
+QCL	Crops and livestock products	44	Colombia	5510	Production	656	Coffee, green	2019	2019	tonnes	885120		Official data	South America
+QCL	Crops and livestock products	45	Comoros	5510	Production	656	Coffee, green	2019	2019	tonnes	141	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	46	Republic of the Congo	5510	Production	656	Coffee, green	2019	2019	tonnes	3069	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	47	Cook Islands	5510	Production	656	Coffee, green	2019	2019	tonnes	0	Im	FAO data based on imputation methodology	Australia
+QCL	Crops and livestock products	48	Costa Rica	5510	Production	656	Coffee, green	2019	2019	tonnes	84096		Official data	South America
+QCL	Crops and livestock products	107	Ivory Coast	5510	Production	656	Coffee, green	2019	2019	tonnes	67697	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	49	Cuba	5510	Production	656	Coffee, green	2019	2019	tonnes	5364	Im	FAO data based on imputation methodology	South America
+QCL	Crops and livestock products	250	Democratic Republic of the Congo	5510	Production	656	Coffee, green	2019	2019	tonnes	31121	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	55	Dominica	5510	Production	656	Coffee, green	2019	2019	tonnes	147	Im	FAO data based on imputation methodology	South America
+QCL	Crops and livestock products	56	Dominican Republic	5510	Production	656	Coffee, green	2019	2019	tonnes	15241		Official data	South America
+QCL	Crops and livestock products	58	Ecuador	5510	Production	656	Coffee, green	2019	2019	tonnes	8141		Official data	South America
+QCL	Crops and livestock products	60	El Salvador	5510	Production	656	Coffee, green	2019	2019	tonnes	39600	*	Unofficial figure	South America
+QCL	Crops and livestock products	61	Equatorial Guinea	5510	Production	656	Coffee, green	2019	2019	tonnes	4228	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	238	Ethiopia	5510	Production	656	Coffee, green	2019	2019	tonnes	482561		Official data	Africa
+QCL	Crops and livestock products	66	Fiji	5510	Production	656	Coffee, green	2019	2019	tonnes	8	Im	FAO data based on imputation methodology	Australia
+QCL	Crops and livestock products	70	French Polynesia	5510	Production	656	Coffee, green	2019	2019	tonnes	22	Im	FAO data based on imputation methodology	Australia
+QCL	Crops and livestock products	74	Gabon	5510	Production	656	Coffee, green	2019	2019	tonnes	86	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	81	Ghana	5510	Production	656	Coffee, green	2019	2019	tonnes	600	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	89	Guatemala	5510	Production	656	Coffee, green	2019	2019	tonnes	225000	*	Unofficial figure	South America
+QCL	Crops and livestock products	90	Guinea	5510	Production	656	Coffee, green	2019	2019	tonnes	42264	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	91	Guyana	5510	Production	656	Coffee, green	2019	2019	tonnes	430	Im	FAO data based on imputation methodology	South America
+QCL	Crops and livestock products	93	Haiti	5510	Production	656	Coffee, green	2019	2019	tonnes	20700	*	Unofficial figure	South America
+QCL	Crops and livestock products	95	Honduras	5510	Production	656	Coffee, green	2019	2019	tonnes	476345		Official data	South America
+QCL	Crops and livestock products	100	India	5510	Production	656	Coffee, green	2019	2019	tonnes	319500		Official data	Asia
+QCL	Crops and livestock products	101	Indonesia	5510	Production	656	Coffee, green	2019	2019	tonnes	760963		Official data	Asia
+QCL	Crops and livestock products	109	Jamaica	5510	Production	656	Coffee, green	2019	2019	tonnes	5587		Official data	South America
+QCL	Crops and livestock products	114	Kenya	5510	Production	656	Coffee, green	2019	2019	tonnes	44500		Official data	Africa
+QCL	Crops and livestock products	120	Laos	5510	Production	656	Coffee, green	2019	2019	tonnes	165888	Im	FAO data based on imputation methodology	Asia
+QCL	Crops and livestock products	123	Liberia	5510	Production	656	Coffee, green	2019	2019	tonnes	534	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	129	Madagascar	5510	Production	656	Coffee, green	2019	2019	tonnes	65760		Official data	Africa
+QCL	Crops and livestock products	130	Malawi	5510	Production	656	Coffee, green	2019	2019	tonnes	11071	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	131	Malaysia	5510	Production	656	Coffee, green	2019	2019	tonnes	3559		Official data	Asia
+QCL	Crops and livestock products	138	Mexico	5510	Production	656	Coffee, green	2019	2019	tonnes	165712		Official data	South America
+QCL	Crops and livestock products	144	Mozambique	5510	Production	656	Coffee, green	2019	2019	tonnes	827	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	28	Myanmar	5510	Production	656	Coffee, green	2019	2019	tonnes	8769		Official data	Asia
+QCL	Crops and livestock products	149	Nepal	5510	Production	656	Coffee, green	2019	2019	tonnes	639		Official data	Asia
+QCL	Crops and livestock products	153	New Caledonia	5510	Production	656	Coffee, green	2019	2019	tonnes	2	Im	FAO data based on imputation methodology	Australia
+QCL	Crops and livestock products	157	Nicaragua	5510	Production	656	Coffee, green	2019	2019	tonnes	174000	*	Unofficial figure	South America
+QCL	Crops and livestock products	159	Nigeria	5510	Production	656	Coffee, green	2019	2019	tonnes	1117	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	166	Panama	5510	Production	656	Coffee, green	2019	2019	tonnes	7200	*	Unofficial figure	South America
+QCL	Crops and livestock products	168	Papua New Guinea	5510	Production	656	Coffee, green	2019	2019	tonnes	55634	Im	FAO data based on imputation methodology	Australia
+QCL	Crops and livestock products	169	Paraguay	5510	Production	656	Coffee, green	2019	2019	tonnes	399		Official data	South America
+QCL	Crops and livestock products	170	Peru	5510	Production	656	Coffee, green	2019	2019	tonnes	363291		Official data	South America
+QCL	Crops and livestock products	171	Philippines	5510	Production	656	Coffee, green	2019	2019	tonnes	60044		Official data	Asia
+QCL	Crops and livestock products	177	Puerto Rico	5510	Production	656	Coffee, green	2019	2019	tonnes	3078	Im	FAO data based on imputation methodology	South America
+QCL	Crops and livestock products	184	Rwanda	5510	Production	656	Coffee, green	2019	2019	tonnes	29366		Official data	Africa
+QCL	Crops and livestock products	191	Saint Vincent and the Grenadines	5510	Production	656	Coffee, green	2019	2019	tonnes	182	Im	FAO data based on imputation methodology	South America
+QCL	Crops and livestock products	244	Samoa	5510	Production	656	Coffee, green	2019	2019	tonnes	12	Im	FAO data based on imputation methodology	Australia
+QCL	Crops and livestock products	193	Sao Tome and Principe	5510	Production	656	Coffee, green	2019	2019	tonnes	7	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	194	Saudi Arabia	5510	Production	656	Coffee, green	2019	2019	tonnes	0	Im	FAO data based on imputation methodology	Asia
+QCL	Crops and livestock products	197	Sierra Leone	5510	Production	656	Coffee, green	2019	2019	tonnes	19316	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	38	Sri Lanka	5510	Production	656	Coffee, green	2019	2019	tonnes	4887		Official data	Asia
+QCL	Crops and livestock products	207	Suriname	5510	Production	656	Coffee, green	2019	2019	tonnes	6	Im	FAO data based on imputation methodology	South America
+QCL	Crops and livestock products	216	Thailand	5510	Production	656	Coffee, green	2019	2019	tonnes	24614		Official data	Asia
+QCL	Crops and livestock products	176	East Timor	5510	Production	656	Coffee, green	2019	2019	tonnes	24855	Im	FAO data based on imputation methodology	Asia
+QCL	Crops and livestock products	217	Togo	5510	Production	656	Coffee, green	2019	2019	tonnes	21316		Official data	Africa
+QCL	Crops and livestock products	219	Tonga	5510	Production	656	Coffee, green	2019	2019	tonnes	16	Im	FAO data based on imputation methodology	Australia
+QCL	Crops and livestock products	220	Trinidad and Tobago	5510	Production	656	Coffee, green	2019	2019	tonnes	23	Im	FAO data based on imputation methodology	South America
+QCL	Crops and livestock products	226	Uganda	5510	Production	656	Coffee, green	2019	2019	tonnes	254088	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	215	United Republic of Tanzania	5510	Production	656	Coffee, green	2019	2019	tonnes	51529	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	231	United States of America	5510	Production	656	Coffee, green	2019	2019	tonnes	2320		Official data	North America
+QCL	Crops and livestock products	155	Vanuatu	5510	Production	656	Coffee, green	2019	2019	tonnes	31	Im	FAO data based on imputation methodology	Australia
+QCL	Crops and livestock products	236	Venezuela	5510	Production	656	Coffee, green	2019	2019	tonnes	56709	Im	FAO data based on imputation methodology	South America
+QCL	Crops and livestock products	237	Vietnam	5510	Production	656	Coffee, green	2019	2019	tonnes	1683971		Official data	Asia
+QCL	Crops and livestock products	249	Yemen	5510	Production	656	Coffee, green	2019	2019	tonnes	20812		Official data	Asia
+QCL	Crops and livestock products	251	Zambia	5510	Production	656	Coffee, green	2019	2019	tonnes	6976	Im	FAO data based on imputation methodology	Africa
+QCL	Crops and livestock products	181	Zimbabwe	5510	Production	656	Coffee, green	2019	2019	tonnes	521	Im	FAO data based on imputation methodology	Africa
