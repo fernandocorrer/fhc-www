@@ -12,6 +12,11 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
+
+# Installing R
+
+The guidelines for R installation can be found [here](R_install.html).
+
 # RStudio interface
 
 After opening RStudio you will see this window:
@@ -37,7 +42,7 @@ Let's start our class using the traditional `Hello World`. Type in your script:
 cat("Hello world")
 ```
 
-Now, select the line (or put your cursor on it) and press `Run`. You can also use `Ctrl + enter`.
+Now, select the line (or put your cursor on it) and press `Run`. You can also use `Ctrl + Enter` (`Command + Return` in Macbooks).
 
 After doing that, your code will be processed in the `Console`, appearing in blue (if you are using the standard colors) and followed by the result. The line will not be processed if it starts with a number sign (`#`). Please include a `#` in your code and run it. 
 
@@ -52,7 +57,7 @@ The symbol `#` is used for **comments** in the code. This is a recommended for o
 cat("Hello world")
 ```
 
-**Important**: when you want to alter your code, edit your **script** and do not type directly on the console, as the latter cannot be saved!
+**Important**: when you want to change your code, edit your **script** and do not type directly on the console, as the latter cannot be saved!
 
 To save your script, go to `Files` - located in the lower right corner (default). Choose a location and create a folder named `RTraining`. 
 
@@ -64,7 +69,7 @@ To save your script, click on the floppy symbol located in the script header or 
 
 ## Establishing the working directory
 
-Another reccomendation in R is to save the script in the same folder as your raw data (input files) and the processed data (plots, tables and other output files). Then, we need to identify the folder as the **working directory**, making R understand that files will be read from there and files can be saved on that folder.
+Another recommendation is to save the script in the same folder as your raw data (input files) and the processed data (plots, tables and other output files). Then, we need to identify the folder as the **working directory**, making R understand that files will be read from there and files can be saved on that folder.
 
 You can do that using the RStudio tools. Locate the `RTraining` folder using the `Files` tab, click on `More` and then on "Set as Working Directory". Something like this output will appear in your console:
 
@@ -78,11 +83,11 @@ It means that you can also use this command for this action. There is a second c
 getwd()
 ```
 
-## Making live easier - `Tab`
+## Making life easier - `Tab`
 
-Now imagine that you have a path to a folder like `~/Documentos/mestrado/semestre1/disciplina_tal/aula_tal/dados_28174/analise_276182/resultados_161/`. It is difficult to remember this long path in `setwd()`.
+Now imagine that you have a path to a folder like `~/Documentos/mestrado/semestre1/course_10001/class_one/data_28174/analysis_276182/results_161/`. It is difficult to remember this long path in `setwd()`.
 
-In addition to the RStudio `File` tab, you can also use `Tab` to help in completing the path. Try to use that key to explore some of your folders. Just start to type and press `Tab`! If you have two files or folders starting with the same pattern, press `Tab` twice to see the options.
+In addition to the RStudio `File`, you can also use `Tab` to help in completing the path. Try to use that key to explore some of your folders. Just start to type and press `Tab`! If you have two files or folders starting with the same pattern, press `Tab` twice to see the options.
 
 By the way...`Tab` works not only for paths, but for commands and objects. As it is common to commit errors when coding, using `Tab` can help in reducing these kinds of mistakes.
 
@@ -90,7 +95,7 @@ By the way...`Tab` works not only for paths, but for commands and objects. As it
 
 Let's code in R! 
 
-First of all, R can be used as a simple calculator, having the same syntax as other softwares :
+First of all, R can be used as a simple calculator, having the same syntax as other software:
 
 ```{r, eval=FALSE}
 1+1.3                 #Decimal defined by "."
@@ -98,8 +103,8 @@ First of all, R can be used as a simple calculator, having the same syntax as ot
 2^3
 4/2
 sqrt(4)              # Square root
-log(100, base = 10)  #Logarithm - base 10
-log(100)             #Logarithm - neperian
+log(100, base = 10)  # Logarithm - base 10
+log(100)             # Logarithm - neperian
 ```
 
 Now, use the basic operation to solve the equation below. It is important to use parentheses `()` to establish the priority among the operations.
@@ -120,7 +125,7 @@ Error example:
 ((13+2+1,5)/3) + log(96, base = 4)
 ```
 
-Another common mistake is to forget to close the parentheses, quotes, brackets or braces, making R to wait for the block to be closed. It sinalizes with an `+`:
+Another common mistake is to forget to close the parentheses, quotes, brackets or braces, making R to wait for the block to be closed. It signalizes with an `+`:
 
 ```{r, eval=FALSE}
 ((13+2+1.5)/3 + log(96, base = 4)
@@ -140,7 +145,7 @@ If this description is not sufficient for understanding the function, you can tr
 
 ## Vector operations
 
-Vectors are the simplest data structures on R. To build a vector with a numeric sequence we can use the following syntax:
+Vectors are the simplest data structures in R. To build a vector with a numeric sequence we can use the following syntax:
 
 ```{r}
 c(1,3,2,5,2)
@@ -195,7 +200,7 @@ x <- c(30.1,30.4,40,30.2,30.6,40.1)
 y = c(0.26,0.3,0.36,0.24,0.27,0.35)
 ```
 
-The symbol of assignment `<-` is common among old programmers, but it has the same meaning as `=`. Some people prefer  `<-` for assignment and `=` to define arguments within functions. Feel free to organize your code in the most confortable way for you.
+The symbol of assignment `<-` is common among old programmers, but it has the same meaning as `=`. Some people prefer  `<-` for assignment and `=` to define arguments within functions. Feel free to organize your code in the most comfortable way for you.
 
 To access the values of an object, type its name:
 
@@ -213,10 +218,10 @@ X
 
 Naming objects is a personal choice, but we suggest keeping a pattern to help in organization. Some names cannot be used as they have an specific role in R:
 
-* NA - Not available, used for missing data
-* NaN - Not a number, used for mathematical uncertainties
-* Inf - Infinite
-* NULL - Null object, lack of information
+* `NA` - Not available, used for missing data
+* `NaN` - Not a number, used for mathematical uncertainties
+* `Inf` - Infinite
+* `NULL` - Null object, lack of information
 
 After creating the object, we can perform operations with it:
 
@@ -270,7 +275,7 @@ We can access specific values within the vector using brackets `[]`. To access t
 z[3]
 ```
 
-Multiple positions can be accessed. For example, let's check the positions 2 to 4:
+Multiple positions can be accessed. For example, let's check the positions from 2 to 4:
 
 ```{r}
 z[2:4]
@@ -285,15 +290,15 @@ str(z)
 This function informs about the vector structure, which is a **numeric** vector with six elements. 
 
 
-## Outher vector categories
+## Other vector categories
 
-Vectors can also store other kind of data, as **characters**:
+Vectors can also store other types of data, as **characters**:
 
 ```{r}
 clone <- c("GRA02", "URO01", "URO03", "GRA02", "GRA01", "URO01")
 ```
 
-Another class is **factors**, that are values categorized in `levels`. Let's see what happens when we transform the character vector `clone` into a factor. It will assign levels to each word:
+Another class is **factor**, that represents values categorized in `levels`. Let's see what happens when we transform the character vector `clone` into a factor. It will assign levels to each word:
 
 ```{r}
 clone_fator <- as.factor(clone)
@@ -302,7 +307,6 @@ levels(clone_fator)
 ```
 
 Then, we only have four levels in a six-element vector as the words "GRA02" e "URO01" are repeated. 
-
 
 To obtain the number of elements in a vector (or its length) we can use the function `length`:
 
@@ -317,7 +321,7 @@ logico <- x > 40
 logico   # Are the elements greater than?
 ```
 
-They are commonly used to identify positions of interest. In our case, let's see which are the `x` elements greater then 40:
+They are commonly used to identify positions of interest. In our case, let's see which elements in `x` are greater than 40:
 
 ```{r}
 which(logico)  # Obtaining the TRUE positions
@@ -375,13 +379,16 @@ In this case, all elements were transformed into characters.
 **Tips**: 
 
 * Beware of the priority of operations. If you have doubt, always include parentheses according to your priority.
-* If you forget to close a `(`, `[` or `"`, the console will wait (showing a `+`). You can press ESC to release your console.
+
+* If you forget to close a `(`, `[` or `"`, the console will wait (showing a `+`). You can press `ESC` to release your console.
+
 * Take care when naming objects, you can easily replace objects when using the same name.
+
 * Keep in your script only functional commands and comment you code.
 
 ## Matrices
 
-Matrices are another class of objects in R and are important for large-scale operation. For this reason, they normally store numeric elements. To create a matrix, we enter a sequence of numbers and inform the number of columns and the number of rows:
+**Matrix** is another class of objects in R and is important for large-scale operation. For this reason, they normally store numeric elements. To create a matrix, we enter a sequence of numbers and inform the number of columns and the number of rows:
 
 ```{r}
 X <- matrix(1:12, nrow = 6, ncol = 2)
@@ -423,9 +430,9 @@ The functions `colnames` and `rownames` also work in `data.frames`.
 
 ## Data frames
 
-Different from matrices, we do not perform mathematical operations with data frames, but they allow the joining of vectors with different classes.  They are similar to tables generated in other software, as Excel.
+Different from matrices, we do not perform mathematical operations with data frames, but they allow us to join vectors of different classes.  They are similar to tables generated in other software, as Excel.
 
-Os *data frames* são combinações de vetores de mesmo comprimento. Todos os vetores que criamos até agora tem tamanho 6, verifique. Podemos assim combiná-los em colunas de um único data.frame:
+*Data frames* are combination of vectors of the same length. All vectors that we created until now have six elements. Then, we can combine them in one data frame:
 
 ```{r}
 field1 <- data.frame("clone" = clone,     # Before the "=" symbol  
@@ -464,7 +471,7 @@ field1[3,3]
 
 Even being a *data frame*, we can perform operations using its vectors.
 
-* Using the diameter and height, calculate the volume according to the formulae below. Save the result in an object named `volume`:
+* Using the diameter and height, calculate the volume according to the formula below. Save the result in an object named `volume`:
 
 $3.14*(diameter/2)^2*height$
 
@@ -497,7 +504,7 @@ my_listt <- list(field1 = field1, mean_height = tapply(field1$height, field1$age
 str(my_listt)
 ```
 
-To access the `campo1` data frame:
+To access the `field1` data frame:
 
 ```{r}
 my_listt[[1]] 
@@ -509,13 +516,13 @@ To access an specific column in the data frame within the list:
 
 ```{r}
 my_listt[[1]][[3]]
-# ou
+# or
 my_listt[[1]]$diameter
 # or
 my_listt$field1$diameter
 ```
 
-Lists are extremely useful when we pretend to use or create many objects in a loop. 
+Lists are extremely useful when we aim to use or create multiple objects in a loop. 
 
 ## Arrays
 
@@ -526,8 +533,6 @@ This is a type that is not very used in the beginning. They interesting to save 
 ```
 
 We would have four 2x3 matrices and the numbers from 1 to 24 will be distributed column-wise.
-
-* To obtain the RData with all objects - [Download here](day1.RData).
 
 # Importing and exporting data
 
@@ -581,7 +586,9 @@ head(field1_txt)
 head(field1_csv)
 ```
 
-Now that we know how to import data into R, let's analyze a really important dataset: coffee production in 2019!!!
+* To obtain the RData with all objects - [Download here](day1.RData).
+
+Now that we know how to import data into R, let's analyze a really important dataset: **coffee production in 2019**!!!
 
 ```{r echo=FALSE, message=F, eval=FALSE}
 # Coffee and country data
@@ -644,7 +651,6 @@ write.table(x = cc_data, file = "data/FAOSTAT_Production_2019.csv",
 ```{r}
 coffee_data <- read.table("data/FAOSTAT_Production_2019.csv",
            sep="\t", header = TRUE, stringsAsFactors = FALSE)
-
 ```
 
 Let's explore the structure of the data:
@@ -656,7 +662,7 @@ dim(coffee_data)
 str(coffee_data)
 ```
 
-We notice that some column names have not the best format. We can change it:
+We notice that some column names do not have the best format. We can change it:
 
 ```{r}
 colnames(coffee_data)
