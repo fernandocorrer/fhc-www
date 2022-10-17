@@ -435,6 +435,7 @@ Different from matrices, we do not perform mathematical operations with data fra
 *Data frames* are combination of vectors of the same length. All vectors that we created until now have six elements. Then, we can combine them in one data frame:
 
 ```{r}
+# Create data frame
 field1 <- data.frame("clone" = clone,     # Before the "=" symbol  
                      "height" = x,        # we give the column name  
                      "diameter" = y,      
@@ -483,7 +484,10 @@ volume
 We can add this vector to the data frame using the function `cbind`:
 
 ```{r}
+# Column bind
 field1 <- cbind(field1, volume)
+
+# Show object
 field1
 str(field1)
 ```
@@ -500,7 +504,10 @@ str(field1)
 They consist in a collection of objects, not necessarily from the same class. In lists we can store all the objects that we worked before and recover them through indexes `[[`:
 
 ```{r}
+# Create a list
 my_listt <- list(field1 = field1, mean_height = tapply(field1$height, field1$age, mean), matrix_ex = W)
+
+# Structure of the list
 str(my_listt)
 ```
 
@@ -529,6 +536,7 @@ Lists are extremely useful when we aim to use or create multiple objects in a lo
 This is a type that is not very used in the beginning. They interesting to save data in more than two dimensions. For example:
 
 ```{r}
+# Array
 (my_array <- array(1:24, dim = c(2,3,4)))
 ```
 
@@ -536,40 +544,51 @@ We would have four 2x3 matrices and the numbers from 1 to 24 will be distributed
 
 # Importing and exporting data
 
-The RData files are exclusive to R. To load the objects saved on a RData:
-
-```{r}
-load("day1.RData")
-```
-
-It will make R recover all objects that we created up to now. To create this file:
+The RData files are exclusive to R. To create this file:
 
 ```{r}
 save.image(file = "day1.RData")
 ```
 
-This command saves every object present in the global environment (top right corner). To save just one object the command is `save`:
+This command saves every object present in the global environment (top right corner).
+
+To load the objects saved on a RData:
+
+```{r}
+# Load R Data
+load("day1.RData")
+```
+
+It will make R recover all objects that we created up to now. 
+
+To save just one object the command is `save`:
 
 ```{r, eval=FALSE}
+# Save one object
 save(field1, file = "field1.RData")
 ```
 
 To remove one object from the global environment:
 
 ```{r, eval=FALSE}
+# Remove one object from the global environment
 rm(field1)
 ```
 
 We can obtain it again using:
 
 ```{r, eval=FALSE}
+# Load object
 load("field1.RData")
 ```
 
 The RData format is exclusive to R and it is interesting to continue analyses instead of running all code again. However, sometimes we aim to export the data to software that require other formats, as `.txt` or `.csv`. These tabular formats can be created by:
 
 ```{r, eval=FALSE}
+# Write a table
 write.table(field1, file = "field1.txt", sep = ";", dec = ".", row.names = FALSE)
+
+# Write CSV
 write.csv(field1, file = "field1.csv", row.names = TRUE)
 ```
 
@@ -580,8 +599,13 @@ When exporting, there are many options regarding file formatting. Consider them 
 To read the tabular outputs that we created, we can use functions and the correct arguments:
 
 ```{r, eval=FALSE}
+# Read table
 field1_txt <- read.table(file = "field1.txt", sep=";", dec=".", header = TRUE)
+
+# Read CSV
 field1_csv <- read.csv(file = "field1.csv")
+
+# Head of the files
 head(field1_txt)
 head(field1_csv)
 ```
@@ -658,18 +682,20 @@ Let's explore the structure of the data:
 ```{r}
 # dim
 dim(coffee_data)
-# Str
+# str
 str(coffee_data)
 ```
 
 We notice that some column names do not have the best format. We can change it:
 
 ```{r}
+# Column names
 colnames(coffee_data)
 
 # Change column names
 colnames(coffee_data) <- c("Domain.Code", "Domain", "Area.Code", "Area", "Element.Code", "Element", "Item.Code", "Item", "Year.Code", "Year", "Unit", "Value", "Flag", "Flag.Description", "Region")
 
+# Check the names
 colnames(coffee_data)
 str(coffee_data)
 ```
@@ -681,6 +707,7 @@ Now we will use this data to learn about different commands and functions in R.
 First, let's investigate how many countries are coffee producers:
 
 ```{r}
+# Check the number of rows
 nrow(coffee_data)
 ```
 
