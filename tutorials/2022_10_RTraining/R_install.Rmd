@@ -61,7 +61,7 @@ You can open R using the command line or clicking in the icon, after doing that 
 
 ## Installing R on Windows
 
-Download the file of R version 4.2.1 in this [link](https://cran.r-project.org/bin/windows/base/). Click twice in the .exe file and follow the instructions.
+Download the file of R version 4.2.1 in this [link](https://cran.r-project.org/bin/windows/base/). Click twice in the `.exe` file and follow the instructions.
 
 After finishing, click on the R icon to open the software.
 
@@ -71,7 +71,7 @@ Sometimes, on Windows, some packages do not work after installation. Maybe you w
 
 ## Installing R on macOS
 
-Download the file of version 4.2.1 in this [link](https://cran.r-project.org/bin/macosx/). This webpage contains the binaries for base distribution and packages to run on Mac OS X systems (through Mac OS X 10.5). Click twice in the .pkg file and follow the instructions.
+Download the file of version 4.2.1 in this [link](https://cran.r-project.org/bin/macosx/). This webpage contains the binaries for base distribution and packages to run on Mac OS X systems (through Mac OS X 10.5). Click twice in the `.pkg` file and follow the instructions.
 
 After finishing, click on the R icon to open the software.
 
@@ -85,4 +85,4 @@ For Linux based systems, the downloaded file has the extension `.deb` (Ubuntu) o
 
 If you prefer not installing R and RStudio in your personal computer, [RStudio cloud](https://rstudio.cloud/) is an interesting option for using them in your browser without installing anything. To access it, register at the [website](https://rstudio.cloud/). 
 
-This is a practical platform, but has a disvantage in terms of RAM limitation. Then, processes that require more storage for processing will not be executed completely.
+This is a practical platform, but has a disadvantage in terms of RAM limitation. Then, processes that require more storage for processing will not be executed completely.

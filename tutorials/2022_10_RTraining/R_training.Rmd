@@ -505,7 +505,9 @@ They consist in a collection of objects, not necessarily from the same class. In
 
 ```{r}
 # Create a list
-my_listt <- list(field1 = field1, mean_height = tapply(field1$height, field1$age, mean), matrix_ex = W)
+my_listt <- list(field1 = field1,
+                 mean_height = tapply(field1$height, field1$age, mean),
+                 matrix_ex = W)
 
 # Structure of the list
 str(my_listt)
@@ -673,8 +675,10 @@ write.table(x = cc_data, file = "data/FAOSTAT_Production_2019.csv",
 ```
 
 ```{r}
-coffee_data <- read.table("data/FAOSTAT_Production_2019.csv",
-           sep="\t", header = TRUE, stringsAsFactors = FALSE)
+coffee_data <- read.table("https://fernandocorrer.github.io/fhc-www/tutorials/2022_10_RTraining/data/FAOSTAT_Production_2019.csv",
+           sep="\t",
+           header = TRUE,
+           stringsAsFactors = FALSE)
 ```
 
 Let's explore the structure of the data:
@@ -702,7 +706,7 @@ str(coffee_data)
 
 # Data wrangling
 
-Now we will use this data to learn about different commands and functions in R.
+Now we will use this dataset to learn about different commands and functions in R.
 
 First, let's investigate how many countries are coffee producers:
 
@@ -721,7 +725,7 @@ table(coffee_data$Region)
 
 ## If and else
 
-Our next activity with the coffee data set is to understand the `if` and `else` structures. Basically, we establish a condition in the `if` structure and, if true, we are going to perform an activity. If the condition is false, we can include a task in the `else` part:
+Our next activity with the coffee data set is to understand the `if` and `else` structures. Basically, we establish a condition in the `if` structure and, if true, we are going to perform an activity. If the condition is false, we can include a task after `else`:
 
 ```{r}
 if(2 >3){
@@ -768,7 +772,7 @@ You certainly noticed that if we need to verify these conditions for all countri
 
 ## For
 
-Is one of the loop structures, applying the same task until a given condition is met. Generally` for` loops use an index that is going to assume the values from a sequence.
+Is one of the loop structures, applying the same task until a given condition is met. Generally ` for` loops use an index that is going to assume the values from a sequence.
 
 ```{r}
 for(i in 1:10){
@@ -786,7 +790,7 @@ for(i in 1:10){
 test
 ```
 
-In the cases above, `i` works as an index that is going to assume the values from 1 to 10 and we have an operation within the braces.
+In the cases above, `i` works as an index that is going to assume the values from 1 to 10 and we have an operation within the curly brackets.
 
 We can combine the loop with the `if` and `else` operation that we created before:
 
@@ -830,9 +834,9 @@ for(i in 1:nrow(coffee_data)){
 }
 ```
 
-The RStudio script editor helps with indentation. If you copy a code and it is not indented as expected, select the lines and press `Ctrl+i`.
+The RStudio script editor helps with indentation. If you copy a code and it is not indented as expected, select the lines and press `Ctrl+i` (`Command + i`).
 
-We can use this structure to identify patterns in our dataset. For example, we can substitute the regions identified as Australia and them correct them to Oceania.
+We can use this structure to identify patterns in our dataset. For example, we can substitute the regions identified as Australia and  correct them to Oceania.
 
 ```{r}
 for(i in 1:nrow(coffee_data)){
@@ -877,19 +881,19 @@ In this loop structure, the task will be interrupted until we reach a certain co
 x <- 1
 while(x < 5){
   x <- x + 1
-  cat(x)
+  cat(x,"\n")
 }
 ```
 
-It is important that this condition is met otherwise the loop will work infinitely. If that happens, you will use other ways to finish the process: by pressing the "STOP" button in RStudio or by `Ctrl+C`.
+It is important that this condition is met otherwise the loop will work infinitely. If that happens, you will use other ways to finish the process: by pressing the "STOP" button in RStudio or by `Ctrl+C` (`Command + C`).
 
-Believe, that is a common problem. It is needed just a small mistake as:
+Believe, that is a common problem! It is needed just a small mistake as:
 
 ```{r, eval=FALSE}
 x <- 1
 while(x < 5){
   x + 1
-  cat(x)
+  cat(x,"\n")
 }
 ```
 
@@ -900,14 +904,14 @@ x <- 1
 while(x < 5){
   x <- x + 1
   if(x==4) break
-  cat(x)
+  cat(x,"\n")
 }
 
 x <- 1
 while(x < 5){
   x <- x + 1
   if(x==4) next
-  cat(x)
+  cat(x,"\n")
 }
 ```
 
@@ -919,7 +923,7 @@ As `while`, `repeat` also needs a stop condition but we explicitly put it inside
 x <- 1
 repeat{
   x <- x+1
-  cat(x)
+  cat(x,"\n")
   if(x==4) break
 }
 ```
@@ -927,7 +931,7 @@ repeat{
 
 ## Nested loops
 
-To increase the fun, it is possible to use the loop structures inside other loops. One example is to loop over the rows and columns of a matrix:
+To make it more fun, it is possible to use the loop structures inside other loops. One example is to loop over the rows and columns of a matrix:
 
 ```{r}
 # Creating matrix
@@ -961,7 +965,7 @@ for(i in var1){
 
 * You define objects using `=` and `==` is the logical operator for equality.
 
-* The conditional and loop structures have a proper syntax: If(){} e for(index in sequence){}. In the *for* loop we can change the name of the index, but we always need to define it and the sequence for iterating.
+* The conditional and loop structures have a proper syntax: `if(){}` and `for(index in sequence){}`. In the `for` loop we can change the name of the index, but we always need to define it and the sequence for iterating.
 
 * Indentation helps to visualize the code and track each step of the process:
 
@@ -978,7 +982,7 @@ for(i in 1:dim(ex_mat)[1]) {   # First level - no space
 
 # Simple graphs on R
 
-Now we can use the graphical functions available in R. In fact, R is really powerful in graphical terms and has very good packages to build graphics as `ggplot2`, `plotly` and `shiny`. They have a different syntax and will not be explored in this course.
+Now we can use the graphical functions available in R. In fact, R is really powerful in graphics and has very good packages to build them as `ggplot2`, `plotly` and `shiny`. They have a different syntax and will not be explored in this course.
 
 The most common graphs have build-in functions that can be customized by the user. Let's start with a histogram of the coffee production.
 
@@ -1006,6 +1010,14 @@ Boxplots:
 ```{r}
 boxplot(coffee_data$Value)
 boxplot(coffee_data$Value ~ coffee_data$Region)
+```
+
+Change the labels of the axes and add title:
+
+```{r}
+boxplot(coffee_data$Value ~ coffee_data$Region, 
+        ylab = "Value", xlab = "Region", 
+        main="Boxplot - Value by Region")
 ```
 
 ## Save graphs
@@ -1043,7 +1055,7 @@ library("ggplot2")
 
 # Reports on RStudio
 
-For some professionals R can be used daily and it is important to create documents in a easy way. Aiming that, R can be combined with Markdown to generate html and pdf files.
+For some professionals R can be used daily and it is important to create documents in a easy way. Aiming that, R can be combined with Markdown to generate `html` and `pdf` files.
 
 Some packages are needed, as the `rmarkdown`:
 
