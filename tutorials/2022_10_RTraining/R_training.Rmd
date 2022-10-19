@@ -50,10 +50,10 @@ After doing that, your code will be processed in the `Console`, appearing in blu
 # cat("Hello world")
 ```
 
-The symbol `#` is used for **comments** in the code. This is a recommended for organization and helps you remember later what you were thinking when you wrote the code. It is also a good practice to help others reading and understanding your code. For example:
+The symbol `#` is used for **comments** in the code. This is  recommended for organization and helps you remember later what you were thinking when you wrote the code. It is also a good practice to help others reading and understanding your code. For example:
 
 ```{r}
-# Working on R
+# Working in R
 cat("Hello world")
 ```
 
@@ -85,7 +85,7 @@ getwd()
 
 ## Making life easier - `Tab`
 
-Now imagine that you have a path to a folder like `~/Documentos/mestrado/semestre1/course_10001/class_one/data_28174/analysis_276182/results_161/`. It is difficult to remember this long path in `setwd()`.
+Now imagine that you have a path to a folder like `~/Documentss/phd/semester1/course_10001/class_one/data_28174/analysis_276182/results_161/`. It is difficult to remember this long path in `setwd()`.
 
 In addition to the RStudio `File`, you can also use `Tab` to help in completing the path. Try to use that key to explore some of your folders. Just start to type and press `Tab`! If you have two files or folders starting with the same pattern, press `Tab` twice to see the options.
 
@@ -191,7 +191,7 @@ Note how boring is to type the same numbers again and again. We are going to mak
 
 # Objects
 
-Storing information in objects and their possible manipulation make R a *object oriented* language. To create an object, just assign **values** to **variables**:
+Storing information in objects and their possible manipulation make R an *object oriented* language. To create an object, just assign **values** to **variables**:
 
 ```{r, results='hide'}
 x = c(30.1,30.4,40,30.2,30.6,40.1)
@@ -230,7 +230,7 @@ x+2
 x*2
 ```
 
-For more than one vector, R will align them and perform the operation element by element:
+For more than one vector, R will align them and perform elementwise operations:
 
 ```{r}
 x + y
@@ -344,7 +344,7 @@ There are many other logical operators like `>`. You can find them in this [link
 
 **Warning1**
 
-Create a numeric sequence containing 10 values and save in a object defined as `a`.
+Create a numeric sequence containing 10 values and save in an object defined as `a`.
 
 ```{r}
 (a <- 1:10)
@@ -414,7 +414,7 @@ X*X
 X%*%t(X)          # Matrix multiplication
 ```
 
-Using these operations requires knowledge in matrix algebra and if you want to know more, *Linear Models in Statistics, Rencher (2008)* has a good review on these topics. You can also explore the R syntax for that [link](http://www.statmethods.net/advstats/matrix.html).
+Using these operations requires knowledge in matrix algebra and if you want to know more, *Linear Models in Statistics, Rencher (2008)* has a good review on these topics. You can also explore the R syntax for that in the [link](http://www.statmethods.net/advstats/matrix.html).
 
 We can pass the coordinates (indexes) [line,column] to get the values in the matrix:
 
@@ -478,7 +478,7 @@ Even being a *data frame*, we can perform operations using its vectors.
 
 * Using the diameter and height, calculate the volume according to the formula below. Save the result in an object named `volume`:
 
-$3.14*(diameter/2)^2*height$
+$3.14\times(\frac{diameter}{2})^2\times height$
 
 ```{r, echo=FALSE}
 volume <- 3.14*((field1$diameter/2)^2)*field1$height
