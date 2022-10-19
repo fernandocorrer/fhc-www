@@ -18,9 +18,6 @@ options(max.print="75")
 opts_knit$set(width=75)
 ```
 
-# Main tutorial
-
-To return to the main tutorial click [here](R_training.html).
 
 # Installation
 

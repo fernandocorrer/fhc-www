@@ -267,6 +267,10 @@ mean(z) # mean
 var(z)  # variance
 ```
 
+## Exercises
+
+You can solve the exercises - Part 1 - [here](R_exercises.html).
+
 ## Indexing
 
 We can access specific values within the vector using brackets `[]`. To access the third value in vector `z`:
@@ -543,6 +547,10 @@ This is a type that is not very used in the beginning. They interesting to save 
 ```
 
 We would have four 2x3 matrices and the numbers from 1 to 24 will be distributed column-wise.
+
+## Exercises 
+
+You can solve the exercises - Part 2 and Part 3 - [here](R_exercises.html).
 
 # Importing and exporting data
 

@@ -8,7 +8,7 @@
         <meta name="author" content="Lachowiec Lab   Montana State University" />
     
     
-    <title>R Installation</title>
+    <title>Exercises</title>
 
         <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -1746,22 +1746,23 @@ display: none;
          
    
         
-      <h1 class="title">R Installation</h1>
+      <h1 class="title">Exercises</h1>
       
          <!-- readthedown authors -->
    <div id="sidebar">
-    <h2><a href="#content">R Installation</a></h2>
+    <h2><a href="#content">Exercises</a></h2>
     <div id="toc">
       <ul>
-      <li><a href="#installation" id="toc-installation">Installation</a>
-      <ul>
-      <li><a href="#installing-r-on-ubuntu" id="toc-installing-r-on-ubuntu">Installing R on Ubuntu</a></li>
-      <li><a href="#installing-r-on-windows" id="toc-installing-r-on-windows">Installing R on Windows</a></li>
-      <li><a href="#installing-r-on-macos" id="toc-installing-r-on-macos">Installing R on macOS</a></li>
-      </ul></li>
-      <li><a href="#installing-rstudio" id="toc-installing-rstudio">Installing RStudio</a></li>
-      <li><a href="#rstudio-cloud" id="toc-rstudio-cloud">RStudio
-      cloud</a></li>
+      <li><a href="#part-1---basic-operations" id="toc-part-1---basic-operations">Part 1 - Basic
+      operations</a></li>
+      <li><a href="#part-2---objects" id="toc-part-2---objects">Part 2 -
+      Objects</a></li>
+      <li><a href="#part-3---indexes" id="toc-part-3---indexes">Part 3 -
+      Indexes</a></li>
+      <li><a href="#part-4---conditionals-and-repetition-structures" id="toc-part-4---conditionals-and-repetition-structures">Part 4 -
+      Conditionals and repetition structures</a></li>
+      <li><a href="#main-tutorial" id="toc-main-tutorial">Main
+      tutorial</a></li>
       </ul>
     </div>
     <div id="postamble" data-toggle="wy-nav-shift" class="status">
@@ -1777,79 +1778,188 @@ Lab</b> <br> Montana State University</p>
    
 <!-- Don't indent these lines or it will mess pre blocks indentation --> 
 <div id="main">
-<div id="installation" class="section level1">
-<h1>Installation</h1>
-<p>R is available for Linux, macOS and Windows. Here we describe the
-steps to install R in each OS. If you experience problems in any step,
-please check the instructions on <a href="https://cran.r-project.org/">CRAN</a>. If the problems persist,
-please message me at
-<code>fernando [dot] hcorrer [at] gmail [dot] com</code>.</p>
-<div id="installing-r-on-ubuntu" class="section level2">
-<h2>Installing R on Ubuntu</h2>
-<p>Here we describe how to install R in two Ubuntu LTS (Long Term
-Support) distributions, but you can also find instruction for other
-distribution - Debian, Redhat and Suse - on <a href="https://cran.r-project.org">CRAN</a>.</p>
-<p>To install R, we will follow some procedures. First, we need to
-update the indices and install helper packages. Next, we will add the
-signing key and add the R 4.0 repository from CRAN:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># update indices</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt update <span class="at">-qq</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># install two helper packages we need</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install <span class="at">--no-install-recommends</span> software-properties-common dirmngr</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># add the signing key (by Michael Rutter) for these repos</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># To verify key, run gpg --show-keys /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc </span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Fingerprint: E298A3A825C0D65DFD57CBB651716619E084DAB9</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> <span class="at">-qO-</span> https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc <span class="kw">|</span> <span class="fu">sudo</span> tee <span class="at">-a</span> /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># add the R 4.0 repo from CRAN -- adjust &#39;focal&#39; to &#39;groovy&#39; or &#39;bionic&#39; as needed</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> add-apt-repository <span class="st">&quot;deb https://cloud.r-project.org/bin/linux/ubuntu </span><span class="va">$(</span><span class="ex">lsb_release</span> <span class="at">-cs</span><span class="va">)</span><span class="st">-cran40/&quot;</span></span></code></pre></div>
-<p>Now, we install R and its dependencies:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt install <span class="at">--no-install-recommends</span> r-base</span></code></pre></div>
-<p>You can open R using the command line or clicking in the icon, after
-doing that you will see something like:</p>
-<p><img src="data:image/png;base64,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" style="width:450px;height:400px;"></p>
+<div id="part-1---basic-operations" class="section level2">
+<h2>Part 1 - Basic operations</h2>
+<p>1 - In an experiment to evaluate the value fo cultivation and use
+(VCU) in corn, the plots consisted of two rows of four meters, spaced
+0.60 m, totaling 6 plants per row. The heights of the plants were
+respectively (in meters): 1.45; 1.73; 1.98; 2.10; 2.03; 1.65; 2.15;
+1.63; 1.53; 1.98; 2.05; 1.52.</p>
+<ul>
+<li><p>Create a vector for height with the above values;</p></li>
+<li><p>Calculate the average height;</p></li>
+<li><p>Calculate the variance of the heights;</p></li>
+</ul>
+<p>2 - In General Genetics, height and weight of 10 students were
+evaluated, five girls and five boys. See the table below with the
+respective values:</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Name</strong></th>
+<th><strong>Weight (kg)</strong></th>
+<th><strong>Height (m)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Maria José</td>
+<td>72</td>
+<td>1.65</td>
+</tr>
+<tr class="even">
+<td>Mariana</td>
+<td>57</td>
+<td>1.68</td>
+</tr>
+<tr class="odd">
+<td>Fernanda</td>
+<td>49</td>
+<td>1.53</td>
+</tr>
+<tr class="even">
+<td>Jéssica</td>
+<td>62</td>
+<td>1.70</td>
+</tr>
+<tr class="odd">
+<td>Carolina</td>
+<td>57</td>
+<td>1.52</td>
+</tr>
+<tr class="even">
+<td>Paulo</td>
+<td>90</td>
+<td>1.82</td>
+</tr>
+<tr class="odd">
+<td>Marcos</td>
+<td>53</td>
+<td>1.63</td>
+</tr>
+<tr class="even">
+<td>João Paulo</td>
+<td>76</td>
+<td>1.78</td>
+</tr>
+<tr class="odd">
+<td>Geraldo</td>
+<td>63</td>
+<td>1.72</td>
+</tr>
+<tr class="even">
+<td>Pedro</td>
+<td>92</td>
+<td>1.98</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Calculate the Body Mass Index (BMI) of each student, according to
+the formula: <span class="math inline">\(BMI=\frac{weight}{height^2}\)</span></p></li>
+<li><p>Calculate the average BMI of the classroom.</p></li>
+<li><p>Calculate the variance of the BMI.</p></li>
+<li><p>Calculate the standard deviation of BMI.</p></li>
+</ul>
+<p>3 - Solve the equation <span class="math inline">\(2x^2 + 8x + 6 =
+0\)</span> using Bhaskara’s formula. Remember: <span class="math inline">\(x = \frac{-b \pm \sqrt{\Delta}}{2a}\)</span>;
+<span class="math inline">\(\Delta = b^2 - 4ac\)</span></p>
 </div>
-<div id="installing-r-on-windows" class="section level2">
-<h2>Installing R on Windows</h2>
-<p>Download the file of R version 4.2.1 in this <a href="https://cran.r-project.org/bin/windows/base/">link</a>. Click
-twice in the <code>.exe</code> file and follow the instructions.</p>
-<p>After finishing, click on the R icon to open the software.</p>
-<div id="windows---problems-to-install-packages" class="section level3">
-<h3>Windows - problems to install packages</h3>
-<p>Sometimes, on Windows, some packages do not work after installation.
-Maybe you will need to install <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>.
-Download the proper version and follow the installing instructions.</p>
+<div id="part-2---objects" class="section level2">
+<h2>Part 2 - Objects</h2>
+<p>1 - Load the dataset named “mtcars”
+(<code>attach(mtcars)</code>).</p>
+<ul>
+<li><p>Verify the class of the object <code>mtcars</code>.</p></li>
+<li><p>Verify the class of the columns <code>hp</code> and
+<code>cyl</code>.</p></li>
+<li><p>Verify the class of the name of the cars (use
+<code>rownames</code>).</p></li>
+</ul>
+<p>2- Using the same dataset as in the previous exercise:</p>
+<ul>
+<li><p>Calculate the average of the <code>hp</code> column.</p></li>
+<li><p>Change the column class <code>hp</code> to factor and average
+again.</p></li>
+<li><p>Compare the results obtained in the previous items, and report
+the differences between them.</p></li>
+</ul>
+<p>3 - Create a list of the names of the following rock band members
+with their date and place of birth.</p>
+<table>
+<thead>
+<tr class="header">
+<th><strong>Name</strong></th>
+<th><strong>Role</strong></th>
+<th><strong>Age</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Dinho</td>
+<td>Vocals</td>
+<td>24</td>
+</tr>
+<tr class="even">
+<td>Bento</td>
+<td>Guitar</td>
+<td>25</td>
+</tr>
+<tr class="odd">
+<td>Samuel</td>
+<td>Bass</td>
+<td>22</td>
+</tr>
+<tr class="even">
+<td>Sérgio</td>
+<td>Drumms</td>
+<td>26</td>
+</tr>
+<tr class="odd">
+<td>Rasec</td>
+<td>Keyboard</td>
+<td>28</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Check the length of the list.</p></li>
+<li><p>Using the list, calculate the mean age.</p></li>
+<li><p>Sort the list in alphabetical order of names.</p></li>
+</ul>
 </div>
+<div id="part-3---indexes" class="section level2">
+<h2>Part 3 - Indexes</h2>
+<p>1 - Create a vector from a sample of the Normal distribution with
+length of 30,000, mean 20 and standard deviation 5. Before creating the
+vector, use <code>set.seed(123456)</code>.</p>
+<ul>
+<li><p>What is the sum of observations that are greater than
+30?</p></li>
+<li><p>What about the sum of observations smaller than the
+mean?</p></li>
+<li><p>Delete the smallest observation from the vector.</p></li>
+</ul>
 </div>
-<div id="installing-r-on-macos" class="section level2">
-<h2>Installing R on macOS</h2>
-<p>Download the file of version 4.2.1 in this <a href="https://cran.r-project.org/bin/macosx/">link</a>. This webpage
-contains the binaries for base distribution and packages to run on Mac
-OS X systems (through Mac OS X 10.5). Click twice in the
-<code>.pkg</code> file and follow the instructions.</p>
-<p>After finishing, click on the R icon to open the software.</p>
+<div id="part-4---conditionals-and-repetition-structures" class="section level2">
+<h2>Part 4 - Conditionals and repetition structures</h2>
+<p>1 - Create an object <code>a</code> containing a sequence from 1 to
+5. Using any repeating structure, add the number 8 to each of the
+elements of <code>a</code>, until the sum of all elements is equal to or
+greater than 10000.</p>
+<p>2 - Use the expression below to generate random yield averages
+(kg/ha) of 50 soybean genotypes:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123456</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>produtividade <span class="ot">=</span> <span class="fu">rnorm</span>(<span class="dv">50</span>, <span class="at">mean =</span> <span class="fl">3500.00</span>, <span class="at">sd =</span> <span class="dv">800</span>)</span></code></pre></div>
+<p>Let’s assume that the national average of soybean yield is 3500.00
+kg/ha. Using conditional structures, check whether the genotypes present
+values above or below the national average productivity, returning the
+phrases <code>above average</code> or <code>below average</code>,
+respectively.</p>
 </div>
-</div>
-<div id="installing-rstudio" class="section level1">
-<h1>Installing RStudio</h1>
-<p>RStudio is a friendly interface for programming in R, as it has very
-practical features. RStudio can also be installed on Windows, macOS or
-Linux. To do that, select the installation file in the <a href="https://www.rstudio.com/products/rstudio/download/">website</a>.</p>
-<p>For Linux based systems, the downloaded file has the extension
-<code>.deb</code> (Ubuntu) or <code>.rpm</code> (Fedora). Click twice in
-the file for the installation.</p>
-</div>
-<div id="rstudio-cloud" class="section level1">
-<h1>RStudio cloud</h1>
-<p>If you prefer not installing R and RStudio in your personal computer,
-<a href="https://rstudio.cloud/">RStudio cloud</a> is an interesting
-option for using them in your browser without installing anything. To
-access it, register at the <a href="https://rstudio.cloud/">website</a>.</p>
-<p>This is a practical platform, but has a disadvantage in terms of RAM
-limitation. Then, processes that require more storage for processing
-will not be executed completely.</p>
+<div id="main-tutorial" class="section level1">
+<h1>Main tutorial</h1>
+<p>To return to the main tutorial click <a href="R_training.html">here</a>.</p>
 </div>
 </div>
 
