@@ -1061,6 +1061,11 @@ Then, you need to call it every time you want to use its functions:
 library("ggplot2")
 ```
 
+# Download the script
+
+* To obtain the script created during our workshop [click here](day1.RData).
+
+
 # Reports on RStudio
 
 For some professionals R can be used daily and it is important to create documents in a easy way. Aiming that, R can be combined with Markdown to generate `html` and `pdf` files.
