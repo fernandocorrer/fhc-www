@@ -1063,7 +1063,7 @@ library("ggplot2")
 
 # Download the script
 
-* To obtain the script created during our workshop [click here](day1.RData).
+* To obtain the script created during our workshop [click here](Rtraining.R).
 
 
 # Reports on RStudio
