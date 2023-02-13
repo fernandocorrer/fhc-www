@@ -1,0 +1,1120 @@
+---
+title: "Introduction to R"
+author: "<b>Lachowiec Lab</b> <br> Montana State University"
+date: 19/10/2022
+output: 
+      rmdformats::readthedown:
+        css: ["./style/style.css"]
+---
+
+```{r setup, include=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+
+# Installing R
+
+The guidelines for R installation can be found [here](R_install.html).
+
+# RStudio interface
+
+After opening RStudio you will see this window:
+
+<img src="images/Rstudio.png"  style="width:700px;height:500px;">
+
+The interface is divided in four windows according to the functions:
+
+* Code editing
+* Enviroment and history
+* Console
+* Files, plots, packages and help
+
+Explore each window. There are innumerous functionalities in each one and we will learn some during the course.
+
+## First script
+
+The window for code editing (probably located in the upper left corner) will be used to write code. Open a new script clicking on  `+` in the upper left corner and select `R script`.
+
+Let's start our class using the traditional `Hello World`. Type in your script:
+
+```{r}
+cat("Hello world")
+```
+
+Now, select the line (or put your cursor on it) and press `Run`. You can also use `Ctrl + Enter` (`Command + Return` in Macbooks).
+
+After doing that, your code will be processed in the `Console`, appearing in blue (if you are using the standard colors) and followed by the result. The line will not be processed if it starts with a number sign (`#`). Please include a `#` in your code and run it. 
+
+```{r}
+# cat("Hello world")
+```
+
+The symbol `#` is used for **comments** in the code. This is  recommended for organization and helps you remember later what you were thinking when you wrote the code. It is also a good practice to help others reading and understanding your code. For example:
+
+```{r}
+# Working in R
+cat("Hello world")
+```
+
+**Important**: when you want to change your code, edit your **script** and do not type directly on the console, as the latter cannot be saved!
+
+To save your script, go to `Files` - located in the lower right corner (default). Choose a location and create a folder named `RTraining`. 
+
+<span style="color:red"> Tips: </span>
+
+* Avoid using spaces and special characters in the name of folders and files as it can make access via the R command line difficult. For example, instead of `R Training`, we chose `RTraining`.
+
+To save your script, click on the floppy symbol located in the script header or use `Ctrl + s`. Select the folder `RTraining`. R scripts are salved with the `.R` extension. 
+
+## Establishing the working directory
+
+Another recommendation is to save the script in the same folder as your raw data (input files) and the processed data (plots, tables and other output files). Then, we need to identify the folder as the **working directory**, making R understand that files will be read from there and files can be saved on that folder.
+
+You can do that using the RStudio tools. Locate the `RTraining` folder using the `Files` tab, click on `More` and then on "Set as Working Directory". Something like this output will appear in your console:
+
+```{r, eval=FALSE}
+setwd("~/Documents/RTraining")
+```
+
+It means that you can also use this command for this action. There is a second command, `getwd()`, which shows your current working directory.
+
+```{r, eval=FALSE}
+getwd()
+```
+
+## Making life easier - `Tab`
+
+Now imagine that you have a path to a folder like `~/Documentss/phd/semester1/course_10001/class_one/data_28174/analysis_276182/results_161/`. It is difficult to remember this long path in `setwd()`.
+
+In addition to the RStudio `File`, you can also use `Tab` to help in completing the path. Try to use that key to explore some of your folders. Just start to type and press `Tab`! If you have two files or folders starting with the same pattern, press `Tab` twice to see the options.
+
+By the way...`Tab` works not only for paths, but for commands and objects. As it is common to commit errors when coding, using `Tab` can help in reducing these kinds of mistakes.
+
+# Basic math operations
+
+Let's code in R! 
+
+First of all, R can be used as a simple calculator, having the same syntax as other software:
+
+```{r, eval=FALSE}
+1+1.3                 #Decimal defined by "."
+2*3
+2^3
+4/2
+sqrt(4)              # Square root
+log(100, base = 10)  # Logarithm - base 10
+log(100)             # Logarithm - neperian
+```
+
+Now, use the basic operation to solve the equation below. It is important to use parentheses `()` to establish the priority among the operations.
+
+$(\frac{13+2+1.5}{3})+ log_{4}96$
+
+Expected result:
+
+```{r, echo=FALSE}
+((13+2+1.5)/3) + log(96, base = 4)
+```
+
+Notice that if your parentheses are placed incorrectly, you are not going to receive any error message as it is a **logical error**. It means that the command will run, but will not do what you expect. This is the most difficult type of error!!! Errors that produce **warning** or **error** are deemed **syntax errors**. In such cases, R will return a message to help the user in correcting the problems. **Warnings** do not compromise the code functioning, but call the user's attention. **Errors** need to be fixed to make the code run properly.
+
+Error example:
+
+```{r, eval=FALSE}
+((13+2+1,5)/3) + log(96, base = 4)
+```
+
+Another common mistake is to forget to close the parentheses, quotes, brackets or braces, making R to wait for the block to be closed. It signalizes with an `+`:
+
+```{r, eval=FALSE}
+((13+2+1.5)/3 + log(96, base = 4)
+```
+
+If that happens, go to the console and press `ESC`. By doing so the waiting code will be interrupted and you **need to fix** the problem.
+
+The `log` and `sqrt` commands are two of many R functions. Functions are a set of organized instructions to perform a task. In R all functions are described to help users. To access help, use the key `?`:
+
+```{r, eval=FALSE}
+?log
+```
+
+It will open the `Help` tab in RStudio.
+
+If this description is not sufficient for understanding the function, you can try to search on Google as there are many websites describing most of them.
+
+## Vector operations
+
+Vectors are the simplest data structures in R. To build a vector with a numeric sequence we can use the following syntax:
+
+```{r}
+c(1,3,2,5,2)
+```
+
+**ATTENTION**: *c* is the R function *Combine Values into a Vector or List* that builds a vector! 
+
+We can use the symbol colon `:` to create a sequence of integers:
+
+```{r}
+1:10
+```
+
+The function `seq` can also be used to build a sequence:
+
+```{r}
+seq(from=0, to=100, by=5)
+# or
+seq(0,100,5) # If you know the order of the function's arguments
+```
+
+* Create a numeric sequence using `seq` going from 4 to 30, with intervals of 3.
+
+```{r, echo=FALSE}
+seq(from=4, to=30, by=3)
+```
+
+The function `rep` generates repeated sequences:
+
+```{r}
+rep(3:5, 2)
+```
+
+Vectors can also be used in mathematical operations:
+
+```{r,eval=FALSE}
+c(1,4,3,2)*2
+c(4,2,1,5)+c(5,2,6,1)
+c(4,2,1,5)*c(5,2,6,1)
+```
+
+Note how boring is to type the same numbers again and again. We are going to make things better storing them in **objects**!
+
+# Objects
+
+Storing information in objects and their possible manipulation make R an *object oriented* language. To create an object, just assign **values** to **variables**:
+
+```{r, results='hide'}
+x = c(30.1,30.4,40,30.2,30.6,40.1)
+# or
+x <- c(30.1,30.4,40,30.2,30.6,40.1)
+y = c(0.26,0.3,0.36,0.24,0.27,0.35)
+```
+
+The symbol of assignment `<-` is common among old programmers, but it has the same meaning as `=`. Some people prefer  `<-` for assignment and `=` to define arguments within functions. Feel free to organize your code in the most comfortable way for you.
+
+To access the values of an object, type its name:
+
+```{r}
+x
+```
+
+R is case sensitive, so `x`  is different from `X`:
+
+```{r, eval=FALSE}
+X
+```
+
+`X` was not created!!! 
+
+Naming objects is a personal choice, but we suggest keeping a pattern to help in organization. Some names cannot be used as they have an specific role in R:
+
+* `NA` - Not available, used for missing data
+* `NaN` - Not a number, used for mathematical uncertainties
+* `Inf` - Infinite
+* `NULL` - Null object, lack of information
+
+After creating the object, we can perform operations with it:
+
+```{r}
+x+2
+x*2
+```
+
+For more than one vector, R will align them and perform elementwise operations:
+
+```{r}
+x + y
+x*y
+```
+
+If the vectors have different lengths, the operation will be repeated with the shorter vector until the end of the longer object.
+
+```{r, results='hide'}
+x*2
+x*c(1,2)
+```
+
+If the shorter is not multiple of the larger, a warning will be shown:
+
+```{r}
+x*c(1,2,3,4)
+```
+
+Again, remember that the **warning** will not compromise the code functioning. It is only an indication that maybe something is not how you would expect!
+
+The result of an operation can be saved in another vector:
+
+```{r, results='hide'}
+z <- (x+y)/2
+z
+```
+
+Some functions can also be applied directly to objects:
+
+```{r}
+sum(z)  # sum the values of z
+mean(z) # mean
+var(z)  # variance
+```
+
+## Exercises
+
+You can solve the exercises - Part 1 - [here](R_exercises.html).
+
+## Indexing
+
+We can access specific values within the vector using brackets `[]`. To access the third value in vector `z`:
+
+```{r, results='hide'}
+z[3]
+```
+
+Multiple positions can be accessed. For example, let's check the positions from 2 to 4:
+
+```{r}
+z[2:4]
+```
+
+To obtain information about the vector, we can use the function `str`:
+
+```{r}
+str(z)
+```
+
+This function informs about the vector structure, which is a **numeric** vector with six elements. 
+
+
+## Other vector categories
+
+Vectors can also store other types of data, as **characters**:
+
+```{r}
+clone <- c("GRA02", "URO01", "URO03", "GRA02", "GRA01", "URO01")
+```
+
+Another class is **factor**, that represents values categorized in `levels`. Let's see what happens when we transform the character vector `clone` into a factor. It will assign levels to each word:
+
+```{r}
+clone_fator <- as.factor(clone)
+str(clone_fator)
+levels(clone_fator)
+```
+
+Then, we only have four levels in a six-element vector as the words "GRA02" e "URO01" are repeated. 
+
+To obtain the number of elements in a vector (or its length) we can use the function `length`:
+
+```{r}
+length(clone_fator)
+```
+
+There is also a type of vector useful for comparisons, the **logical** vectors. They store `TRUE` and `FALSE` values:
+
+```{r}
+logico <- x > 40
+logico   # Are the elements greater than?
+```
+
+They are commonly used to identify positions of interest. In our case, let's see which elements in `x` are greater than 40:
+
+```{r}
+which(logico)  # Obtaining the TRUE positions
+x[which(logico)] # Obtaining the numbers greater than 40 by the position
+# or
+x[which(x > 40)]
+```
+
+We can also try to find for specific elements:
+
+```{r}
+clone %in% c("URO03", "GRA02")
+```
+
+There are many other logical operators like `>`. You can find them in this [link](http://www.statmethods.net/management/operators.html).
+
+**Warning1**
+
+Create a numeric sequence containing 10 values and save in an object defined as `a`.
+
+```{r}
+(a <- 1:10)
+```
+
+Create a second sequence using decimal numbers and transform them in the same values as `a`.
+
+```{r}
+b <- seq(from = 0.1, to = 1, 0.1)
+(b <- b*10)
+```
+
+They are equal, right? Let's compare if `b` is equal to `a`.
+
+```{r}
+a==b
+```
+
+Wow! Some values are not equal!!! Why?
+
+```{r}
+a==round(b)
+```
+
+**Warning2**
+
+Do not put values from different classes in the same vector. If you try that, R will convert all to the same class:
+
+```{r}
+problem <- c(TRUE, "vish", 1)
+problem
+```
+
+In this case, all elements were transformed into characters.
+
+**Tips**: 
+
+* Beware of the priority of operations. If you have doubt, always include parentheses according to your priority.
+
+* If you forget to close a `(`, `[` or `"`, the console will wait (showing a `+`). You can press `ESC` to release your console.
+
+* Take care when naming objects, you can easily replace objects when using the same name.
+
+* Keep in your script only functional commands and comment you code.
+
+## Matrices
+
+**Matrix** is another class of objects in R and is important for large-scale operation. For this reason, they normally store numeric elements. To create a matrix, we enter a sequence of numbers and inform the number of columns and the number of rows:
+
+```{r}
+X <- matrix(1:12, nrow = 6, ncol = 2)
+X
+```
+
+We can also use as input numeric sequences stored in vectors:
+
+```{r}
+W <- matrix(c(x,y), nrow = 6, ncol =2)
+W
+```
+
+Matrices can be used to perform operations:
+
+```{r}
+X*2
+X*X        
+X%*%t(X)          # Matrix multiplication
+```
+
+Using these operations requires knowledge in matrix algebra and if you want to know more, *Linear Models in Statistics, Rencher (2008)* has a good review on these topics. You can also explore the R syntax for that in the [link](http://www.statmethods.net/advstats/matrix.html).
+
+We can pass the coordinates (indexes) [line,column] to get the values in the matrix:
+
+```{r}
+W[4,2] # Number in row 4, column 2
+```
+
+Sometimes it is more informative to name rows and columns. To do that:
+
+```{r}
+colnames(W) <- c("height", "diameter")
+rownames(W) <- clone
+W
+```
+
+The functions `colnames` and `rownames` also work in `data.frames`.
+
+## Data frames
+
+Different from matrices, we do not perform mathematical operations with data frames, but they allow us to join vectors of different classes.  They are similar to tables generated in other software, as Excel.
+
+*Data frames* are combination of vectors of the same length. All vectors that we created until now have six elements. Then, we can combine them in one data frame:
+
+```{r}
+# Create data frame
+field1 <- data.frame("clone" = clone,     # Before the "=" symbol  
+                     "height" = x,        # we give the column name  
+                     "diameter" = y,      
+                     "age" = rep(3:5, 2),
+                     "harvest"= logico) 
+field1
+```
+
+We can access the information of each column:
+
+```{r}
+field1$age
+```
+
+Or:
+
+```{r}
+field1[,4] 
+```
+
+The number inside the brackets refers to the column because it's the second number (after the comma). The first number refers to the row. As the first element was empty, it means that we are accessing all rows for that column.
+
+If we desire a specific value in the data frame, we can pass both coordinates:
+
+```{r}
+field1[1,2] 
+```
+
+* Get the diameter of clone "URO03".
+
+```{r, echo=FALSE}
+field1[3,3] 
+```
+
+Even being a *data frame*, we can perform operations using its vectors.
+
+* Using the diameter and height, calculate the volume according to the formula below. Save the result in an object named `volume`:
+
+$3.14\times(\frac{diameter}{2})^2\times height$
+
+```{r, echo=FALSE}
+volume <- 3.14*((field1$diameter/2)^2)*field1$height
+volume
+```
+
+We can add this vector to the data frame using the function `cbind`:
+
+```{r}
+# Column bind
+field1 <- cbind(field1, volume)
+
+# Show object
+field1
+str(field1)
+```
+
+
+**Tips**:
+
+* Remember that the columns of both matrices and data frames must have the same number of elements.
+
+* Do not forget that everything should be clearly indicated. For example, a *4ac* multiplication must be written as `4*a*c`. To generate a vector with the elements 1,3,2,6 the command is: `c(1,3,2,6)`.
+
+## Lists
+
+They consist in a collection of objects, not necessarily from the same class. In lists we can store all the objects that we worked before and recover them through indexes `[[`:
+
+```{r}
+# Create a list
+my_listt <- list(field1 = field1,
+                 mean_height = tapply(field1$height, field1$age, mean),
+                 matrix_ex = W)
+
+# Structure of the list
+str(my_listt)
+```
+
+To access the `field1` data frame:
+
+```{r}
+my_listt[[1]] 
+# or
+my_listt$field1
+```
+
+To access an specific column in the data frame within the list:  
+
+```{r}
+my_listt[[1]][[3]]
+# or
+my_listt[[1]]$diameter
+# or
+my_listt$field1$diameter
+```
+
+Lists are extremely useful when we aim to use or create multiple objects in a loop. 
+
+## Arrays
+
+This is a type that is not very used in the beginning. They interesting to save data in more than two dimensions. For example:
+
+```{r}
+# Array
+(my_array <- array(1:24, dim = c(2,3,4)))
+```
+
+We would have four 2x3 matrices and the numbers from 1 to 24 will be distributed column-wise.
+
+## Exercises 
+
+You can solve the exercises - Part 2 and Part 3 - [here](R_exercises.html).
+
+# Importing and exporting data
+
+The RData files are exclusive to R. To create this file:
+
+```{r}
+save.image(file = "day1.RData")
+```
+
+This command saves every object present in the global environment (top right corner).
+
+To load the objects saved on a RData:
+
+```{r}
+# Load R Data
+load("day1.RData")
+```
+
+It will make R recover all objects that we created up to now. 
+
+To save just one object the command is `save`:
+
+```{r, eval=FALSE}
+# Save one object
+save(field1, file = "field1.RData")
+```
+
+To remove one object from the global environment:
+
+```{r, eval=FALSE}
+# Remove one object from the global environment
+rm(field1)
+```
+
+We can obtain it again using:
+
+```{r, eval=FALSE}
+# Load object
+load("field1.RData")
+```
+
+The RData format is exclusive to R and it is interesting to continue analyses instead of running all code again. However, sometimes we aim to export the data to software that require other formats, as `.txt` or `.csv`. These tabular formats can be created by:
+
+```{r, eval=FALSE}
+# Write a table
+write.table(field1, file = "field1.txt", sep = ";", dec = ".", row.names = FALSE)
+
+# Write CSV
+write.csv(field1, file = "field1.csv", row.names = TRUE)
+```
+
+Obs: That are packages to export and import data in other formats, as the package `xlsx` that deals with Excel formats. `vroom` is an interesting package to compact large tables.
+
+When exporting, there are many options regarding file formatting. Consider them when you plan to use the file in other software.
+
+To read the tabular outputs that we created, we can use functions and the correct arguments:
+
+```{r, eval=FALSE}
+# Read table
+field1_txt <- read.table(file = "field1.txt", sep=";", dec=".", header = TRUE)
+
+# Read CSV
+field1_csv <- read.csv(file = "field1.csv")
+
+# Head of the files
+head(field1_txt)
+head(field1_csv)
+```
+
+* To obtain the RData with all objects - [Download here](day1.RData).
+
+Now that we know how to import data into R, let's analyze a really important dataset: **coffee production in 2019**!!!
+
+```{r echo=FALSE, message=F, eval=FALSE}
+# Coffee and country data
+cc_data <- read.csv("data/FAOSTAT_data_11-1-2021.csv") %>% 
+  filter(!Area=="China, mainland") %>% 
+  mutate(
+    Area=case_when(
+      Area == "Bolivia (Plurinational State of)" ~ "Bolivia",
+      Area == "Congo" ~ "Republic of the Congo",
+      Area == "Côte d'Ivoire" ~ "Ivory Coast",
+      Area == "Lao People's Democratic Republic" ~
+        "Laos",
+      Area == "Timor-Leste" ~ "East Timor",
+      Area == "Venezuela (Bolivarian Republic of)" ~
+        "Venezuela",
+      Area == "Viet Nam" ~ "Vietnam",
+      TRUE ~ Area
+    )
+  ) %>% 
+  filter(Element=="Yield") %>% 
+  left_join(., rworldmap::countryRegions %>% 
+              select(ADMIN, REGION), 
+            by=c("Area"="ADMIN")) 
+
+
+  
+write.table(x = cc_data, file = "data/FAOSTAT_Yield_2019.csv",
+              quote = F, row.names = F, sep = "\t") 
+
+# Coffee and country data
+cc_data <- read.csv("data/FAOSTAT_data_11-1-2021.csv") %>% 
+  filter(!Area=="China, mainland") %>% 
+  mutate(
+    Area=case_when(
+      Area == "Bolivia (Plurinational State of)" ~ "Bolivia",
+      Area == "Congo" ~ "Republic of the Congo",
+      Area == "Côte d'Ivoire" ~ "Ivory Coast",
+      Area == "Lao People's Democratic Republic" ~
+        "Laos",
+      Area == "Timor-Leste" ~ "East Timor",
+      Area == "Venezuela (Bolivarian Republic of)" ~
+        "Venezuela",
+      Area == "Viet Nam" ~ "Vietnam",
+      Area == "Cabo Verde" ~ "Cape Verde",
+      Area == "China, Taiwan Province of" ~ "Taiwan",
+      TRUE ~ Area
+    )
+  ) %>% 
+  filter(Element=="Production") %>% 
+  filter(!is.na(Value)) %>% 
+  left_join(., rworldmap::countryRegions %>% 
+              select(ADMIN, REGION), 
+            by=c("Area"="ADMIN")) 
+
+
+write.table(x = cc_data, file = "data/FAOSTAT_Production_2019.csv",
+              quote = F, row.names = F, sep = "\t") 
+```
+
+```{r}
+coffee_data <- read.table("https://fernandocorrer.github.io/fhc-www/tutorials/2022_10_RTraining/data/FAOSTAT_Production_2019.csv",
+           sep="\t",
+           header = TRUE,
+           stringsAsFactors = FALSE)
+```
+
+Let's explore the structure of the data:
+
+```{r}
+# dim
+dim(coffee_data)
+# str
+str(coffee_data)
+```
+
+We notice that some column names do not have the best format. We can change it:
+
+```{r}
+# Column names
+colnames(coffee_data)
+
+# Change column names
+colnames(coffee_data) <- c("Domain.Code", "Domain", "Area.Code", "Area", "Element.Code", "Element", "Item.Code", "Item", "Year.Code", "Year", "Unit", "Value", "Flag", "Flag.Description", "Region")
+
+# Check the names
+colnames(coffee_data)
+str(coffee_data)
+```
+
+# Data wrangling
+
+Now we will use this dataset to learn about different commands and functions in R.
+
+First, let's investigate how many countries are coffee producers:
+
+```{r}
+# Check the number of rows
+nrow(coffee_data)
+```
+
+We can now verify the regions of the world whose countries are coffee producers. To do that, we can use the function `table`:
+
+```{r}
+table(coffee_data$Region)
+```
+
+# Conditionals
+
+## If and else
+
+Our next activity with the coffee data set is to understand the `if` and `else` structures. Basically, we establish a condition in the `if` structure and, if true, we are going to perform an activity. If the condition is false, we can include a task after `else`:
+
+```{r}
+if(2 >3){
+  cat("two is greater than three")
+} else {
+  cat("two is less than three")
+}
+```
+
+* Calculate the mean production of coffee
+
+```{r}
+mean_production <- mean(coffee_data[,12])
+```
+
+
+* Verify if the production of the eighth country is higher than the mean
+
+```{r}
+if(coffee_data[8,12] >= mean_production){
+  cat("Wow! Thanks for saving the world!")
+} else {
+  cat("Let's increase the production!")
+}
+```
+
+We can use multiple conditions in the structure using `else if` after the first `if `. Just to train, let's create a second condition to check if the production is higher than the first quantile:
+
+```{r}
+first_quan <- quantile(coffee_data$Value)[2]
+
+if(coffee_data[8,12] >= mean_production){
+  cat("Wow! Thanks for saving the world!")
+} else if (coffee_data[8,12] >= first_quan){
+  cat("You are on the way!")
+} else {
+  cat("Let's increase the production!")
+}
+```
+
+You certainly noticed that if we need to verify these conditions for all countries, one by one.
+
+# Repetition structures
+
+## For
+
+Is one of the loop structures, applying the same task until a given condition is met. Generally ` for` loops use an index that is going to assume the values from a sequence.
+
+```{r}
+for(i in 1:10){
+  print(i)
+}
+```
+
+We can save this values in an object:
+
+```{r}
+test <- vector()
+for(i in 1:10){
+  test[i] <- i+4 
+}
+test
+```
+
+In the cases above, `i` works as an index that is going to assume the values from 1 to 10 and we have an operation within the curly brackets.
+
+We can combine the loop with the `if` and `else` operation that we created before:
+
+```{r eval=FALSE}
+for(i in 1:nrow(coffee_data)){
+  if(coffee_data[i,12] >= mean_production){
+    cat("Wow! Thanks for saving the world!\n")
+  } else if (coffee_data[i,12] >= first_quan){
+    cat("You are on the way!\n")
+  } else {
+    cat("Let's increase the production!\n")
+  }  
+}
+```
+
+**Tip: Indentation**
+
+Note the difference:
+
+```{r eval=FALSE}
+for(i in 1:nrow(coffee_data)){
+if(coffee_data[i,12] >= mean_production){
+cat("Wow! Thanks for saving the world!")
+} else if (coffee_data[i,12] >= first_quan){
+cat("You are on the way!")
+} else {
+cat("Let's increase the production!")
+}  
+}
+```
+
+```{r eval=FALSE}
+for(i in 1:nrow(coffee_data)){
+  if(coffee_data[i,12] >= mean_production){
+    cat("Wow! Thanks for saving the world!")
+  } else if (coffee_data[i,12] >= first_quan){
+    cat("You are on the way!")
+  } else {
+    cat("Let's increase the production!")
+  }  
+}
+```
+
+The RStudio script editor helps with indentation. If you copy a code and it is not indented as expected, select the lines and press `Ctrl+i` (`Command + i`).
+
+We can use this structure to identify patterns in our dataset. For example, we can substitute the regions identified as Australia and  correct them to Oceania.
+
+```{r}
+for(i in 1:nrow(coffee_data)){
+  if(coffee_data[i,15]=="Australia"){
+    print("Please, change the value to Oceania")
+  }
+}
+```
+
+
+We can also print the value of the line. For that, we use the function `cat`. However, we need to include a `\n` in the end of the string to have a line break.
+
+```{r}
+for(i in 1:nrow(coffee_data)){
+  if(coffee_data[i,15]=="Australia"){
+    cat("Please, change the line", i, " to Oceania\n")
+  }
+}
+```
+
+Now we can keep the information of the line in a vector:
+
+```{r}
+correction <- vector()
+for(i in 1:nrow(coffee_data)){
+  if(coffee_data[i,15]=="Australia"){
+    cat("Please, change the line", i, " to Oceania\n")
+    correction <- c(correction, i)
+  }
+}
+```
+
+> Now, that we have the lines, how would you correct "Australia" to "Oceania"?
+
+['coffee_data[correction, 15] <- "Oceania"']{.spoiler}
+
+## While
+
+In this loop structure, the task will be interrupted until we reach a certain condition:
+
+```{r}
+x <- 1
+while(x < 5){
+  x <- x + 1
+  cat(x,"\n")
+}
+```
+
+It is important that this condition is met otherwise the loop will work infinitely. If that happens, you will use other ways to finish the process: by pressing the "STOP" button in RStudio or by `Ctrl+C` (`Command + C`).
+
+Believe, that is a common problem! It is needed just a small mistake as:
+
+```{r, eval=FALSE}
+x <- 1
+while(x < 5){
+  x + 1
+  cat(x,"\n")
+}
+```
+
+In the `while` structure, we can use the commands `break` and `next` to meet other conditions:
+
+```{r}
+x <- 1
+while(x < 5){
+  x <- x + 1
+  if(x==4) break
+  cat(x,"\n")
+}
+
+x <- 1
+while(x < 5){
+  x <- x + 1
+  if(x==4) next
+  cat(x,"\n")
+}
+```
+
+## Repeat
+
+As `while`, `repeat` also needs a stop condition but we explicitly put it inside the code block and use `break`. This means that the function will be executed until the condition is achieved.
+
+```{r}
+x <- 1
+repeat{
+  x <- x+1
+  cat(x,"\n")
+  if(x==4) break
+}
+```
+
+
+## Nested loops
+
+To make it more fun, it is possible to use the loop structures inside other loops. One example is to loop over the rows and columns of a matrix:
+
+```{r}
+# Creating matrix
+ex_mat <- matrix(nrow=10, ncol=10)
+# each number in a cell is the product between the row and the column indexes
+for(i in 1:dim(ex_mat)[1]) {
+  for(j in 1:dim(ex_mat)[2]) {
+    ex_mat[i,j] = i*j
+  }
+}
+```
+
+Another example:
+
+```{r eval=FALSE}
+var1 <- c("fertilizer1", "fertilizer2")
+var2 <- c("ESS", "URO", "GRA")
+for(i in var1){
+  for(j in var2){
+    file_name <- paste0(i,"_clone_",j,".txt")
+    file <- data.frame("block" = "fake_data", "treatment" ="fake_data")
+    write.table(file, file = file_name)
+  }
+}
+```
+
+
+**Tips**
+
+* Take care when running the same command twice, especially if you are overwriting some variables. Remember to check your inputs.
+
+* You define objects using `=` and `==` is the logical operator for equality.
+
+* The conditional and loop structures have a proper syntax: `if(){}` and `for(index in sequence){}`. In the `for` loop we can change the name of the index, but we always need to define it and the sequence for iterating.
+
+* Indentation helps to visualize the code and track each step of the process:
+
+```{r}
+# Creating matrix
+ex_mat <- matrix(nrow=10, ncol=10)
+
+for(i in 1:dim(ex_mat)[1]) {   # First level - no space
+  for(j in 1:dim(ex_mat)[2]) { # Second level - one space (tab)
+    ex_mat[i,j] = i*j          # Third level - two spaces
+  }                            # Second level closed
+}                              # First level closed
+```
+
+# Simple graphs on R
+
+Now we can use the graphical functions available in R. In fact, R is really powerful in graphics and has very good packages to build them as `ggplot2`, `plotly` and `shiny`. They have a different syntax and will not be explored in this course.
+
+The most common graphs have build-in functions that can be customized by the user. Let's start with a histogram of the coffee production.
+
+```{r}
+hist(coffee_data$Value)
+```
+
+We can customize using the function parameters:
+
+* `breaks` to define the intervals
+
+```{r}
+hist(coffee_data$Value, breaks = 2)
+hist(coffee_data$Value, breaks = 15)
+```
+
+A second type of graphs are the barplots:
+
+```{r}
+barplot(table(coffee_data$Region))
+```
+
+Boxplots:
+
+```{r}
+boxplot(coffee_data$Value)
+boxplot(coffee_data$Value ~ coffee_data$Region)
+```
+
+Change the labels of the axes and add title:
+
+```{r}
+boxplot(coffee_data$Value ~ coffee_data$Region, 
+        ylab = "Value", xlab = "Region", 
+        main="Boxplot - Value by Region")
+```
+
+## Save graphs
+
+You can use the RStudio menus to save the graphs or by using the specific-format functions as `png`:
+
+```{r eval=FALSE}
+png(filename = "hist_rbase.png")
+hist(coffee_data$Value)
+dev.off()
+
+png(filename = "hist_rbase.png", width = 1500, height = 1500, res= 300)
+hist(coffee_data$Value)
+dev.off()
+```
+
+You can explore other functions as `pdf`, `jpeg` , `bitmap` and `tiff`.
+
+
+# Packages
+
+There are a large number of packages on R. In the CRAN repository there are **`r available.packages(repos = "http://cran.us.r-project.org") %>% dim() %>% nth(1)`** packages. Other repositories are [Bioconductor](https://bioconductor.org) (**`r length(BiocManager::available())`** packages), [R-Forge](https://r-forge.r-project.org) (**`r available.packages(repos="http://R-Forge.R-project.org") %>% dim() %>%  nth(1)`** packages) and [GitHub](https://github.com).
+
+To show how from CRAN, we are going to install `ggplot2`. Basically we need to use the function `install.packages()`:
+
+```{r eval=FALSE}
+install.packages("ggplot2")
+```
+
+Then, you need to call it every time you want to use its functions:
+
+```{r}
+library("ggplot2")
+```
+
+# Download the script
+
+* To obtain the script created during our workshop [click here](Rtraining.R).
+
+
+# Reports on RStudio
+
+For some professionals R can be used daily and it is important to create documents in a easy way. Aiming that, R can be combined with Markdown to generate `html` and `pdf` files.
+
+Some packages are needed, as the `rmarkdown`:
+
+```{r, eval=FALSE}
+install.packages("rmarkdown")
+```
+
+**Tip**
+
+* For generating pdf documents, you will also need to install [LaTeX](https://www.latex-project.org/get/)
+
+To create and R Markdown file (.Rmd extension), click in the `+` sign in the upper left corner. Choose `R Markdown`, give a tittle for your document and the option `html`. When you do that, RStudio will automatically create a template document. The header of the document looks like:
+
+```
+---
+title: "Test"
+author: "Me"
+date: "June 5, 2021"
+output: html_document
+---
+```
+
+This is the most simple document type to be created on R Markdown. The template shows the syntax of this lightweight markup language. The symbol `#` is used for section titles, `##` for a lower level (subtitles) and so on (i.e. `###` for sub subtitles). For italics, keep the word between `*`. To bold a work, just put it between `**`.
+
+```
+# Title 
+
+Just a test to look the template
+
+## Subtitle 
+
+Section
+* Item
+**bold**
+*italics*
+here is a [link](https://www.r-project.org)!
+```
+
+To compile the markdown code, click on `Knit`. You will need to define the name of the file and where to save it.
+
+Markdown can also directly "understand" other languages as html, css and LaTeX. As we mentioned before, LaTeX need and dependencies need to be installed in the computer.
+
+# Suggestions
+
+If you have any suggestion to improve this tutorial please message us.
+
+We do have lots of material in Portuguese that can be accessed [here](http://cristianetaniguti.github.io/Workshop_genetica_esalq/).
+
+We also recommend other tutorials in [English](https://GENt-esalq.github.io/cursoR/english_tutorials.html). 

@@ -1,0 +1,162 @@
+/* Colors */
+
+h1,h2,h3,h4,h5,h6{
+  color: #172b68;
+}
+
+#sidebar{
+  background: #275795;
+}
+
+#sidebar h2 {
+  background-color: #172b68;
+  color: #fcfcfc;
+}
+
+#sidebar h2 a {
+  color: #fcfcfc;
+}
+
+#sidebar a{
+  color: #edce86;
+}
+
+#sidebar a:hover{
+  color: #e6b046 !important;
+  background-color: #82ace8;
+  cursor: pointer;
+}
+
+
+#toc ul.nav li.active a {
+  background-color: #E3E3E3;
+  color: gray !important;
+}
+
+
+#toc ul.nav li.active > a {
+  background-color: #fcfcfc;
+  color: #e6b046 !important;
+}
+
+#toc ul.nav li.active ul li a {
+  background-color: #E3E3E3;
+  color: gray !important;
+}
+
+#toc ul.nav li.active ul li.active a {
+  background-color: #fcfcfc;
+  color: #e6b046 !important;
+
+}
+
+#postamble {
+  position: fixed;
+  bottom: 0;
+  color: #172b68;
+  background-color: #fcfcfc;
+  border-top: solid 10px #fcfcfc;
+}
+
+#postamble .author .glyphicon{
+  display: none;
+}
+
+
+#postamble .date{
+  color: #172b68;
+
+}
+
+/* Code */
+/* ## Tags ##*/
+code{
+    color:#e6b046;
+    font-weight: bold;
+}
+
+code.sourceCode{
+    font-weight: normal;
+}
+
+/* ## Source code ## */
+
+/* highlighting options */
+code.sourceCode span.kw { color: #000000; font-weight: bold; } /* Keyword */
+code.sourceCode span.fu { color: #000000; font-weight: bold; } /* Function */
+code.sourceCode span.dt { color: #000000; } /* DataType */
+code.sourceCode span.dv { color: #000000; } /* DecVal */
+code.sourceCode span.bn { color: #000000; } /* BaseN */
+code.sourceCode span.fl { color: #000000; } /* Float */
+code.sourceCode span.ch { color: #000000; } /* Char */
+code.sourceCode span.st { color: #8a5801; } /* String */
+code.sourceCode span.sc { color: #f53f07; } /* SC */
+code.sourceCode span.co { color: #003B5E; } /* Comment */
+code.sourceCode span.ot { color: #000000; } /* Other */
+
+
+/* General*/
+
+b,strong{
+    font-weight:bold}
+
+/* Main */
+
+#main a:link {
+    background-image: linear-gradient(180deg,#e3c78f,#c78500);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #c78500 !important;
+    padding: .125em 1px 0 1px;
+    transition: background-position .15s, color .15s;
+
+}
+
+#main a:hover {
+  text-decoration: none;
+  background-position: 0 0.3em;
+  color: #275795 !important;
+}
+
+a:hover, a:active{
+    outline:0;
+}
+
+a:hover{
+    color:#3d1308}
+
+a:visited{
+    color:#3d1308}
+
+#main a.sourceLine {
+    color: inherit;
+}
+
+
+
+/* Nav */
+#nav-top span.glyphicon {
+    color: #275795;
+    font-size: 28px;
+}
+
+
+/* Spoilers */
+
+.spoiler {
+  visibility: hidden;
+}
+
+.spoiler::before {
+  visibility: visible;
+  content: "Spoiler!!";
+  color: #C76F23
+}
+
+.spoiler:hover {
+  visibility: visible;
+}
+
+.spoiler:hover::before {
+  display: none;
+}

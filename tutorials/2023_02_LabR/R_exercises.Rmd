@@ -1,0 +1,135 @@
+---
+title: "Exercises"
+author: "<b>Lachowiec Lab</b> <br> Montana State University"
+date: 19/10/2022
+output: 
+      rmdformats::readthedown:
+        css: ["./style/style.css"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r knitr_init, echo=FALSE, cache=FALSE}
+library(knitr)
+## Global options
+options(max.print="75")
+opts_knit$set(width=75)
+```
+
+
+## Part 1 - Basic operations
+
+1 - In an experiment to evaluate the value fo cultivation and use (VCU) in corn, the plots consisted of two rows of four meters, spaced 0.60 m, totaling 6 plants per row. The heights of the plants were respectively (in meters): 1.45; 1.73; 1.98; 2.10; 2.03; 1.65; 2.15; 1.63; 1.53; 1.98; 2.05; 1.52.
+
+* Create a vector for height with the above values;
+
+* Calculate the average height;
+
+* Calculate the variance of the heights;
+
+2 - In General Genetics, height and weight of 10 students were evaluated, five girls and five boys. See the table below with the respective values:
+
+| **Name**   | **Weight (kg)** | **Height (m)** |
+|------------|---------------|----------------|
+| Maria José | 72            | 1.65           |
+| Mariana    | 57            | 1.68           |
+| Fernanda   | 49            | 1.53           |
+| Jéssica    | 62            | 1.70            |
+| Carolina   | 57            | 1.52           |
+| Paulo      | 90            | 1.82           |
+| Marcos     | 53            | 1.63           |
+| João Paulo | 76            | 1.78           |
+| Geraldo    | 63            | 1.72           |
+| Pedro      | 92            | 1.98           |
+
+
+* Calculate the Body Mass Index (BMI) of each student, according to the formula: $BMI=\frac{weight}{height^2}$
+
+* Calculate the average BMI of the classroom.
+
+* Calculate the variance of the BMI.
+
+* Calculate the standard deviation of BMI.
+
+3 - Solve the equation $2x^2 + 8x + 6 = 0$ using Bhaskara's formula. Remember: $x = \frac{-b \pm \sqrt{\Delta}}{2a}$; $\Delta = b^2 - 4ac$
+
+## Part 2 - Objects
+
+1 - Load the dataset named “mtcars” (`attach(mtcars)`).
+
+* Verify the class of the object `mtcars`.
+
+* Verify the class of the columns `hp` and `cyl`.
+
+* Verify the class of the name of the cars (use `rownames`).
+
+
+2- Using the same dataset as in the previous exercise:
+
+* Calculate the average of the `hp` column.
+
+* Change the column class `hp` to factor and average again.
+
+* Compare the results obtained in the previous items, and report the differences between them.
+
+3 - Create a list of the names of the following rock band members with their date and place of birth.
+
+| **Name** | **Role** | **Age** |
+|----------|----------|---------|
+| Dinho    | Vocals   | 24      |
+| Bento    | Guitar   | 25      |
+| Samuel   | Bass     | 22      |
+| Sérgio   | Drumms   | 26      |
+| Rasec    | Keyboard | 28      |
+
+```{r echo=FALSE, eval=FALSE}
+ ##Ex 3
+  list_mam <- list(Nomes= c("Dinho", "Bento", "Samuel", "Sérgio", "Rasec"),
+                   Funcao=c("Vocalista","Guitarrista", "Baixista", "Baterista","Tecladista"),
+                   Idade = c(24, 25, 22, 26, 28))
+ l_idade <- mean(list_mam$Idade)
+  l_ordered <- lapply(list_mam, function(x){ x[order(list_mam$Nomes)]})
+```
+
+* Check the length of the list.
+
+* Using the list, calculate the mean age.
+
+* Sort the list in alphabetical order of names.
+
+## Part 3 - Indexes
+
+1 - Create a vector from a sample of the Normal distribution with length of 30,000, mean 20 and standard deviation 5. Before creating the vector, use `set.seed(123456)`.
+
+* What is the sum of observations that are greater than 30?
+
+* What about the sum of observations smaller than the mean?
+
+* Delete the smallest observation from the vector.
+
+## Part 4 - Conditionals and repetition structures
+
+1 - Create an object `a` containing a sequence from 1 to 5. Using any repeating structure, add the number 8 to each of the elements of `a`, until the sum of all elements is equal to or greater than 10000.
+
+```{r echo=FALSE, eval=FALSE}
+a = seq(1,5,1)
+  while(sum(a) < 10000){
+    a = a + 8
+  }
+```
+
+
+2 - Use the expression below to generate random yield averages (kg/ha) of 50 soybean genotypes:
+
+```{r eval=FALSE}
+set.seed(123456)
+produtividade = rnorm(50, mean = 3500.00, sd = 800)
+```
+
+Let's assume that the national average of soybean yield is 3500.00 kg/ha. Using conditional structures, check whether the genotypes present values above or below the national average productivity, returning the phrases `above average` or `below average`, respectively.
+
+# Main tutorial
+
+To return to the main tutorial click [here](R_training.html).
