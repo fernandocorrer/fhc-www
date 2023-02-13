@@ -1,7 +1,7 @@
 ---
 title: "R Installation"
 author: "<b>Lachowiec Lab</b> <br> Montana State University"
-date: 19/10/2022
+date: 2023/02/14
 output: 
       rmdformats::readthedown:
         css: ["./style/style.css"]
@@ -21,7 +21,7 @@ opts_knit$set(width=75)
 
 # Installation
 
-R is available for Linux, macOS and Windows. Here we describe the steps to install R in each OS. If you experience problems in any step, please check the instructions on [CRAN](https://cran.r-project.org/). If the problems persist, please message me at `fernando [dot] hcorrer [at] gmail [dot] com`.
+R is available for Linux, macOS and Windows. Here we describe the steps to install R in each OS. If you experience problems in any step, please check the instructions on [CRAN](https://cran.r-project.org/). If the problems persist, please message me at `fernando [dot] correr [at] montana [dot] edu`.
 
 ## Installing R on Ubuntu
 
