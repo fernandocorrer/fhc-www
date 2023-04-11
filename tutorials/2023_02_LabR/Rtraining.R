@@ -108,3 +108,99 @@ dim(field1)
 
 field1[1,1]
 field1$age
+
+
+#save.image(file = "file/RData")
+#save(obj1, obj2, file="file.RData")
+#load(file = "file.RData")
+
+
+### Day 3 ###
+
+coffee_data <- read.table("https://fernandocorrer.github.io/fhc-www/tutorials/2022_10_RTraining/data/FAOSTAT_Production_2019.csv",
+                          sep="\t",
+                          header = TRUE,
+                          stringsAsFactors = FALSE)
+str(coffee_data)
+
+
+if (2>3) {
+  cat("two is greater than three")
+} else {
+  cat("two is less than three")
+}
+
+mean_production <- mean(coffee_data[,12])
+
+if(coffee_data[8,12] >= mean_production){
+  cat("WOW! Great production")
+} else {
+  cat("Let's increase")
+}
+
+dim(coffee_data)
+
+# Repetition
+for(i in 1:10){
+  print(i)
+}
+
+test <- vector(length = 10)
+for(i in 1:10){
+  test[i] <- i + 2
+}
+test
+
+
+for(coffee in 1:nrow(coffee_data)){
+  if(coffee_data[coffee,12] >= mean_production){
+    print("WOW! Great production")
+  } else {
+    print("Let's increase")
+  }
+}
+
+for(row in 1:nrow(coffee_data)){
+  if(coffee_data$REGION[row]=="Australia"){
+    coffee_data$REGION[row] = "Oceania"
+    }  
+}
+
+# While
+x = 1
+while(x < 5){
+  print(x)
+  x = x + 1
+}
+
+x = 1
+while(x < 5){
+  print(x)
+  x = x + 1
+  if(x==4){
+    break
+  }
+}
+
+# Repeat
+x = 1
+repeat{
+  print(x)
+  x = x+1
+  if(x==4) break
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
