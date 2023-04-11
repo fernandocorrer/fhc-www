@@ -988,6 +988,125 @@ for(i in 1:dim(ex_mat)[1]) {   # First level - no space
 }                              # First level closed
 ```
 
+# Write (good) functions in R
+
+Usually when we have a certain block of code repeatedly used in a certain analysis or that we constantly use in multiple projects, it's probably a good idea to create a function. It helps us to automate tasks in our scripts! Writing good functions is a long journey that requires patience, but let's learn together. 
+
+**How to think about tasks?** It's like a recipe...
+
+![](./images/pizzeria.jpg)
+
+Adapting [The Food Charlatan's pizza recipes](https://thefoodcharlatan.com/homemade-pizza-recipe/) we can see that to prepare a 
+simple margherita we need:
+
+* Margherita:
+
+  * 10 leaves of fresh basil
+  * 2 Tomatoes
+  * 1 16 ounce ball of pizza dough, 12 to 16 ounces is fine
+  * 1 tablespoon olive oil, for rubbing dough
+  * 1 cup pizza sauce
+  * 3 ounces thinly sliced mozzarella cheese
+  * 5 ounces shredded mozzarella cheese
+
+* Pepperoni:
+
+  * 2.5 ounces pepperoni
+  * 2 tablespoons shredded parmesan cheese
+  * 1 16 ounce ball of pizza dough, 12 to 16 ounces is fine
+  * 1 tablespoon olive oil, for rubbing dough
+  * 1 cup pizza sauce
+  * 3 ounces thinly sliced mozzarella cheese
+  * 5 ounces shredded mozzarella cheese
+
+Do you notice anything in common?
+
+Well, we can start thinking about creating our function. Starting with basics, we can print our essential ingredients for any pizza:
+
+```{r}
+# Create function
+pizza_ingredients <- function(){
+  print("16 ounce ball of pizza dough")
+  print("1 tablespoon olive oil, for rubbing dough")
+  print("1 cup pizza sauce")
+  print("3 ounces thinly sliced mozzarella cheese")
+  print("5 ounces shredded mozzarella cheese")
+}
+
+# Use function
+pizza_ingredients()
+```
+
+How could we add the specific ingredients of a certain type? We can add an argument to the function.
+
+```{r}
+pizza_ingredients <- function(type){
+  # Ingredients by type
+  if(type=="Margherita"){
+    print("10 leaves of fresh basil")
+    print("2 Tomatoes")
+  } else if (type=="Pepperoni"){
+    print("2.5 ounces pepperoni")
+    print("2 tablespoons shredded parmesan cheese")
+  } else {
+    print("Not available.")
+  }
+  
+  # Common ingredients
+  print("16 ounce ball of pizza dough")
+  print("1 tablespoon olive oil, for rubbing dough")
+  print("1 cup pizza sauce")
+  print("3 ounces thinly sliced mozzarella cheese")
+  print("5 ounces shredded mozzarella cheese")
+}
+
+# Use function
+pizza_ingredients("Pepperoni")
+```
+
+Now we know that a function is composed by a **name**, **arguments** and the **body**. We can add innumerous arguments to a function to specify other "subtasks", input data or to meet certain conditions. For example, what could we do if we want the total amount of ingredients to make `n` pizzas?
+
+```{r}
+pizza_ingredients <- function(type,n){
+  # Ingredients by type
+  if(type=="Margherita"){
+    print(paste(n*10," leaves of fresh basil"))
+    print(paste(n*2, " Tomatoes"))
+  } else if (type=="Pepperoni"){
+    print(paste(n*2.5, " ounces pepperoni"))
+    print(paste(n*2, " tablespoons shredded parmesan cheese"))
+  } else {
+    return(paste("Not available."))
+  }
+  
+  # Common ingredients
+  print(paste(n*16," ounce ball of pizza dough"))
+  print(paste(n*1," tablespoon olive oil, for rubbing dough"))
+  print(paste(n*1," cup pizza sauce"))
+  print(paste(n*3," ounces thinly sliced mozzarella cheese"))
+  print(paste(n*5, " ounces shredded mozzarella cheese"))
+}
+
+# Use function
+pizza_ingredients("Pepperoni",2)
+```
+
+## Good practices
+
+1) Give a name that is easy to understand what is the task performed by this function
+
+* Usually verbs
+
+* Think about space
+
+2) You can use functions across different projects!
+
+3) Indentation
+
+4) Robust function x Time
+
+This section is only a small summary of a great chapter about [Functions](https://r4ds.hadley.nz/functions.html) in the [R for Data Science](https://r4ds.hadley.nz) written by Hadley Wickham and Garret Grolemund. Please check this reference for details.  
+
 # Simple graphs on R
 
 Now we can use the graphical functions available in R. In fact, R is really powerful in graphics and has very good packages to build them as `ggplot2`, `plotly` and `shiny`. They have a different syntax and will not be explored in this course.
