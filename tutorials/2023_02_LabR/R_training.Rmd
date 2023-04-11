@@ -1095,9 +1095,9 @@ pizza_ingredients("Pepperoni",2)
 
 1) Give a name that is easy to understand what is the task performed by this function
 
-* Usually verbs
+    * Usually verbs
 
-* Think about space
+    * Think about space
 
 2) You can use functions across different projects!
 
