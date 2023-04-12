@@ -6,7 +6,7 @@ tags:
   - En
 ---
 
-# Exploring the 1.	National Center for Biotechnology Information website
+# Exploring the National Center for Biotechnology Information website
 
 The [National Center for Biotechnology Information](https://www.ncbi.nlm.nih.gov) (NCBI) is a valuable resource for  biomedical and genomic information. It is located in Bethesda (MD) and is founded in 1988 as a division of the [National Library of Medicine](https://www.nlm.nih.gov/socialmedia/index.html) (NLM), the largest biomedical library and part of the [National Institutes of Health](https://www.nih.gov) (NIH). 
 
