@@ -1,6 +1,7 @@
 ---
 layout: defaults/classes_posts
 title: Homework 01
+show-profile: false
 tags:
   - NCBI
   - General Genetics
