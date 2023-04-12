@@ -1,7 +1,6 @@
 ---
 layout: defaults/classes_posts
 title: Homework 01
-show_profile: FALSE
 ---
 
 ## Exploring the National Center for Biotechnology Information website
