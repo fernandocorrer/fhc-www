@@ -1,11 +1,7 @@
 ---
 layout: defaults/classes_posts
 title: Homework 01
-show-profile: false
-tags:
-  - NCBI
-  - General Genetics
-  - En
+show_profile: FALSE
 ---
 
 ## Exploring the National Center for Biotechnology Information website
