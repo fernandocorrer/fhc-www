@@ -1,6 +1,9 @@
 ---
-layout: defaults/posts
+layout: defaults/classes_posts
 title: Homework 01
+tags:
+  - General Genetics
+  - En
 ---
 
 # Exploring the 1.	National Center for Biotechnology Information website
