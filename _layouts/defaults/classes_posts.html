@@ -3,8 +3,18 @@
 
 {% include structure/head.html %}
 
+<body>
+
+{% include bars/nav.html %}
+
+{% capture col1 %}{% if page.narrow %}3{% else %}4{% endif %}{% endcapture %}
+
+{% capture col2 %}{% if page.narrow %}9{% else %}8{% endif %}{% endcapture %}
+
 <h1 class="border border-top-0 border-right-0 border-left-0 mb-3 pb-2">{{ page.title }}</h1>
 
 {{ content }}
+
+</body>
 
 </html>
