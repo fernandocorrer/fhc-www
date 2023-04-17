@@ -13,7 +13,8 @@ Let's explore! Click [here](https://www.ncbi.nlm.nih.gov)
 
 We can explore [genes](https://www.ncbi.nlm.nih.gov/gene/). As an example, we are going to search the gene coding for the protein [ABI3](https://www.ncbi.nlm.nih.gov/gene/51225):
 
-![:scale 70%](./figures/ncbi_02.png)
+
+<img src="./figures/ncbi_02.png"  width=70%>
 
 Focusing on the *Arabidopsis thaliana* ABI3, we can explore the genomic region and products associated to this gene:
 
