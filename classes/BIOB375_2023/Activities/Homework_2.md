@@ -9,7 +9,7 @@ title: Homework 02
 
 The diagram of the following figure represents a hypothetical cell with four chromosomes: a pair of long homologs and a pair of short homologs. The **O** locus, which has the alleles *O* and *o*, is in the long pair; the **H** locus, which has the alleles *H* and *h*, is in the short chromosomes. Assume that the genotype of the cell is **OoHh**, represent in the figure the segregation of those genes during the formation of the gametes. Identify and describe all the phases of the division indicated by the letters (ex: A- interphase: simple chromosomes, not paired). 
 
-<img src='figures/hom02p1.png' width=70%/>
+<img width="50%" src='figures/hom02p1.png'>
 
 
 
