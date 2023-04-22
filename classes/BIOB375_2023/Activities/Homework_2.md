@@ -28,8 +28,42 @@ Fill in the table below with the percentages of gametes:
 
 ### Exercise 02
 
-Now consider that the genes *O* (O, o) and *Z* (Z, z) are in the long pair and that *H* (H, h) is in the short pair. Suppose that crossing over occurs in 30% of the cells, which are the possible gametes and their frequencies? Show all possible gametes using the figure below:
+Now consider that the genes *O* (O, o) and *Z* (Z, z) are in the long pair and that *H* (H, h) is in the short pair. Suppose that crossing over occurs in **30%** of the cells, which are the possible **gametes and their frequencies**? Show all possible gametes using the figure below:
 
+![](./figures/hom_02_p2.png)
+
+| **Genotype** | **Frequency (%)** |
+|--------------|-------------------|
+| O            |                   |
+| o            |                   |
+| H            |                   |
+| h            |                   |
+| Z            |                   |
+| z            |                   |
+| OH           |                   |
+| Oh           |                   |
+| oH           |                   |
+| oh           |                   |
+| OZ           |                   |
+| Oz           |                   |
+| oZ           |                   |
+| oz           |                   |
+| ZH           |                   |
+| Zh           |                   |
+| zH           |                   |
+| zh           |                   |
+| OZH          |                   |
+| OZh          |                   |
+| OzH          |                   |
+| Ozh          |                   |
+| oZH          |                   |
+| oZh          |                   |
+| ozH          |                   |
+| ozh          |                   |
+
+### Exercise 03
+
+Draw the sub-stages of prophase I, including explanation of each one. Explain in which stage of prophase crossing over occurs and the importance of this cellular process.
 
 ## References
 
