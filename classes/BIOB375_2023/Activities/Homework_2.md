@@ -11,7 +11,6 @@ The diagram of the following figure represents a hypothetical cell with four chr
 
 <img src="./figures/hom_02_p1.png"  width=70%>
 
-<br/><br/>
 
 
 Fill in the table below with the percentages of gametes:
@@ -37,7 +36,6 @@ Now consider that the genes *O* (O, o) and *Z* (Z, z) are in the long pair and t
 
 <img src="./figures/hom_02_p2.png"  width=70%>
 
-<br/><br/>
 
 | **Genotype** | **Frequency (%)** |
 |--------------|-------------------|
