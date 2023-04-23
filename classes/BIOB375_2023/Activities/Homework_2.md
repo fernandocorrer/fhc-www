@@ -11,21 +11,63 @@ The diagram of the following figure represents a hypothetical cell with four chr
 
 <img width="70%" src='figures/hom02p1.png'>
 
-
-
 Fill in the table below with the percentages of gametes:
 
-| **Genotype**  | **Frequency (%)**   |
-|---------------|---------------------|
-| O             |                     |
-| o             |                     |
-| H             |                     |
-| h             |                     |
-| ------------- | ------------------- |
-| OH            |                     |
-| Oh            |                     |
-| oH            |                     |
-| oh            |                     |
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-yla0{font-weight:bold;text-align:left;vertical-align:middle}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-yla0">Genotype</th>
+    <th class="tg-yla0">Frequency (%)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-cly1">O</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">o</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">H</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">h</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">-------------</td>
+    <td class="tg-cly1">-------------------</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">OH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Oh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+</tbody>
+</table>
 
 <br/><br/>
 <br/><br/>
@@ -36,36 +78,131 @@ Now consider that the genes *O* (O, o) and *Z* (Z, z) are in the long pair and t
 
 <img width="70%" src="figures/hom02p2.png">
 
+<br/><br/>
 
-| **Genotype** | **Frequency (%)** |
-|--------------|-------------------|
-| O            |                   |
-| o            |                   |
-| H            |                   |
-| h            |                   |
-| Z            |                   |
-| z            |                   |
-| OH           |                   |
-| Oh           |                   |
-| oH           |                   |
-| oh           |                   |
-| OZ           |                   |
-| Oz           |                   |
-| oZ           |                   |
-| oz           |                   |
-| ZH           |                   |
-| Zh           |                   |
-| zH           |                   |
-| zh           |                   |
-| OZH          |                   |
-| OZh          |                   |
-| OzH          |                   |
-| Ozh          |                   |
-| oZH          |                   |
-| oZh          |                   |
-| ozH          |                   |
-| ozh          |                   |
-
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-yla0{font-weight:bold;text-align:left;vertical-align:middle}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-yla0">Genotype</th>
+    <th class="tg-yla0">Frequency (%)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-cly1">O</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">o</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">H</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">h</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Z</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">z</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">OH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Oh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">OZ</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Oz</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oZ</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oz</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">ZH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Zh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">zH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">zh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">OZH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">OZh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">OzH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Ozh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oZH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oZh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">ozH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">ozh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+</tbody>
+</table>
 
 <br/><br/>
 <br/><br/>
