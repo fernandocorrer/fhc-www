@@ -22,23 +22,6 @@ After counting the number of seeds in each category, fill out the table. Remembe
 |          |  (n)                    |                         |             | -             | $\chi^2$=            |
 
 
-We can also use the formula directly:
-
-$$\chi^2\_{Calculated} = \sum \frac{(observed - expected)^2}{expected}$$
-
-Then, we can find the $\chi^2$ in the table (\chi^2_{Table}) considering the number of degrees of freedom
-
-* Degrees of freedom: Number of categories - 1
-    
-If $\chi^2\_{Calculated} > \chi^2\_{Table}$
-
-* $fo \neq fe$
-    
-* Differences between the observed and expected frequencies cannot be attributed to chance. Segregation does not follow the expected ratio (3:1).
-
-Otherwise:
-
-* Differences between the observed and expected frequencies can be attributed to chance.  Conclusion: the 3:1 ratio explains the results.
 
 ### Exercise 2
 
