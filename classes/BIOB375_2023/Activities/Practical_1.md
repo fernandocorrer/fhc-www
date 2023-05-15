@@ -13,14 +13,7 @@ You received ears of corn with smooth and wrinkled seeds from an F2 generation. 
 
 <img width="60%" src='figures/pract_01/su_02.png'>
 
-After counting the number of seeds in each category, fill out the table. Remember that for the case we are testing, the expected ratio is 3:1. Then, let's calculate the $\chi^2$ :
-
-| Category | Observed frequency (fo) | Expected frequency (fe) | $\(fo - fe\)$ | $\(fo - fe\)^2$ | $\[\(fo - fe\)^2\]/\(fe\)$ |
-|----------|-------------------------|-------------------------|-------------|---------------|----------------------|
-| Normal   |                         | 3/4n                    |             |               |                      |
-| Wrinkled |                         | 1/2n                    |             |               |                      |
-|          |  (n)                    |                         |             | -             | $\chi^2$=            |
-
+After counting the number of seeds in each category, fill out the table. Remember that for the case we are testing, the expected ratio is 3:1. Then, let's calculate the \\(\chi^2\\):
 
 
 ### Exercise 2
