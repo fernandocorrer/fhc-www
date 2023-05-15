@@ -13,7 +13,7 @@ You received ears of corn with smooth and wrinkled seeds from an F2 generation. 
 
 <img width="60%" src='figures/pract_01/su_02.png'>
 
-After counting the number of seeds in each category, fill out the table. Remember that for the case we are testing, the expected ratio is 3:1. Then, let's calculate the $\chi^2$:
+After counting the number of seeds in each category, fill out the table. Remember that for the case we are testing, the expected ratio is 3:1. Then, let's calculate the $\chi^2$ :
 
 | Category | Observed frequency (fo) | Expected frequency (fe) | $(fo - fe)$ | $(fo - fe)^2$ | $[(fo - fe)^2]/(fe)$ |
 |----------|-------------------------|-------------------------|-------------|---------------|----------------------|
@@ -24,13 +24,13 @@ After counting the number of seeds in each category, fill out the table. Remembe
 
 We can also use the formula directly:
 
-$$\chi^2_{Calculated} = \sum \frac{(observed - expected)^2}{expected}$$
+$$\chi^2\_{Calculated} = \sum \frac{(observed - expected)^2}{expected}$$
 
 Then, we can find the $\chi^2$ in the table (\chi^2_{Table}) considering the number of degrees of freedom
 
 * Degrees of freedom: Number of categories - 1
     
-If $\chi^2_{Calculated} > \chi^2_{Table}$
+If $\chi^2\_{Calculated} > \chi^2\_{Table}$
 
 * $fo \neq fe$
     
