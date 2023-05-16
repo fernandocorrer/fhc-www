@@ -24,7 +24,7 @@ After counting the number of seeds in each category, fill out the table. Remembe
 
 We can also use the formula directly:
 
-$$\chi^2_{Calculated} = \sum \frac{(observed - expected)^2}{expected}$$
+$$ \chi^2_{Calculated} = \sum \frac{(observed - expected)^2}{expected} $$
 
 Then, we can find the $\chi^2$ in the table (\chi^2_{Table}) considering the number of degrees of freedom
 

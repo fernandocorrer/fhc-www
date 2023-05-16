@@ -3,27 +3,221 @@ layout: defaults/classes_posts
 title: Homework 01
 ---
 
-## Exploring the National Center for Biotechnology Information website
+## Oh, Meiosis...
 
-The [National Center for Biotechnology Information](https://www.ncbi.nlm.nih.gov) (NCBI) is a valuable resource for biomedical and genomic information. It is located in Bethesda (MD) and is founded in 1988 as a division of the [National Library of Medicine](https://www.nlm.nih.gov/socialmedia/index.html) (NLM), the largest biomedical library and part of the [National Institutes of Health](https://www.nih.gov) (NIH). On the NCBI website we can find multiple databases relevant to research in Genetics, being a important resource for Bioinformatics. There are two other very relevant sources of information: [DDBJ](https://www.ddbj.nig.ac.jp/) and [EMBL-EBI](https://www.ebi.ac.uk/). Together with NCBI they form the [International Nucleotide Sequence Database Collaboration](https://www.insdc.org) (INSDC), creating a synchronized database where we can find data from multiple experiments - from raw reads to complete details about studies.
+### Exercise 01
 
-Let's explore! Click [here](https://www.ncbi.nlm.nih.gov)
+The diagram of the following figure represents a hypothetical cell with four chromosomes: a pair of long homologs and a pair of short homologs. The **O** locus, which has the alleles *O* and *o*, is in the long pair; the **H** locus, which has the alleles *H* and *h*, is in the short chromosomes. Assume that the genotype of the cell is **OoHh**, represent in the figure the segregation of those genes during the formation of the gametes. Identify and describe all the phases of the division indicated by the letters (ex: A- interphase: simple chromosomes, not paired). 
 
-![](./figures/ncbi_01.png)
+<img width="70%" src='figures/hom02p1.png'>
 
-We can explore [genes](https://www.ncbi.nlm.nih.gov/gene/). As an example, we are going to search the gene coding for the protein [ABI3](https://www.ncbi.nlm.nih.gov/gene/51225):
+Fill in the table below with the percentages of gametes:
 
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-yla0{font-weight:bold;text-align:left;vertical-align:middle}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-yla0">Genotype</th>
+    <th class="tg-yla0">Frequency (%)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-cly1">O</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">o</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">H</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">h</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">-------------</td>
+    <td class="tg-cly1">-------------------</td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">OH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Oh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+</tbody>
+</table>
 
-<img width="70%" src="figures/ncbi_02.png">
+<br/><br/>
+<br/><br/>
 
-Focusing on the *Arabidopsis thaliana* ABI3, we can explore the genomic region and products associated to this gene:
+### Exercise 02
 
-<iframe id="iframe_NCBI" width="1500" height="500" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/embedded_iframe.html?iframe=iframe_NCBI&id=NC_003074.8&tracks=[key:sequence_track,name:T418951,display_name:Sequence,id:T418951,dbname:GenBank,annots:NA,ShowLabel:false,ColorGaps:false,shown:true,order:1][key:gene_model_track,name:T2595935,display_name:Genes\, RefSeq propagation from TAIR and Araport\, refreshed on 2022-10-20,id:T2595935,dbname:SADB,annots:NA000375140.1,Options:MergeAll,CDSProductFeats:false,NtRuler:true,AaRuler:true,HighlightMode:2,ShowLabel:true,shown:true,order:40][key:SNP_track,name:T2439100,display_name:(R) EVA RefSNP Release 3,id:T2439100,dbname:vcfTabix,annots:https\://ftp.ebi.ac.uk/pub/databases/eva/rs_releases/release_3/by_assembly/GCA_000001735.1/GCA_000001735.1_current_ids.vcf.gz,Layout:Adaptive,rmt_mapped_id:3,shown:true,order:50]&assm_context=GCF_000001735.4&app_context=Gene&v=8996797:9001756&c=null&select=null&slim=0&appname=no_appname" onload="if(!window._SViFrame){_SViFrame=true;window.addEventListener('message',function(e){if(e.origin=='https://www.ncbi.nlm.nih.gov' && !isNaN(e.data.h))document.getElementById(e.data.f).height=parseInt(e.data.h);});}">
-</iframe>
+Now consider that the genes *O* (O, o) and *Z* (Z, z) are in the long pair and that *H* (H, h) is in the short pair. Suppose that crossing over occurs in **30%** of the cells, which are the possible **gametes and their frequencies**? Show all possible gametes using the figure below:
 
-There is a vast bibliography about ABI3 looking to [related articles in PubMed](https://pubmed.ncbi.nlm.nih.gov/?from_uid=822061&linkname=gene_pubmed).
+<img width="70%" src="figures/hom02p2.png">
 
+<br/><br/>
 
-Activity:
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-cly1{text-align:left;vertical-align:middle}
+.tg .tg-yla0{font-weight:bold;text-align:left;vertical-align:middle}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-yla0">Genotype</th>
+    <th class="tg-yla0">Frequency (%)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-cly1">O</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">o</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">H</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">h</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Z</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">z</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">OH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Oh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">OZ</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Oz</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oZ</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oz</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">ZH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Zh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">zH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">zh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">OZH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">OZh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">OzH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">Ozh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oZH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">oZh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">ozH</td>
+    <td class="tg-cly1"></td>
+  </tr>
+  <tr>
+    <td class="tg-cly1">ozh</td>
+    <td class="tg-cly1"></td>
+  </tr>
+</tbody>
+</table>
 
-1.	Go to the [Gene](https://www.ncbi.nlm.nih.gov/gene/) database and look for a gene of your interest. You can search for a gene that you heard about before or take a look in recent news. Explore other features on NCBI, and in a document please explain the information you found in other databases (include pictures). In addition, please take a look in the literature, read and comment in forum at least one paper related to the gene you chose. For this last task, you can use [PubMed](https://pubmed.ncbi.nlm.nih.gov), [PubMed Central](https://www.ncbi.nlm.nih.gov/pmc/), [Web of Science](https://www.webofscience.com/wos/woscc/basic-search), [Google Scholar](https://scholar.google.com) or any other source of your preference.
+<br/><br/>
+<br/><br/>
+
+### Exercise 03
+
+Draw the sub-stages of prophase I, including explanation of each one. Explain in which stage of prophase crossing over occurs and the importance of this cellular process.
+
+<br/><br/>
+<br/><br/>
+
+## References
+
+This activity was based on the General Genetics workbook of the [Department of Genetics](http://www.genetica.esalq.usp.br/en/) of the [Luiz de Queiroz College of Agriculture](https://www.en.esalq.usp.br).
+
+## Download the file
+
+You can download the file for the exercise [here](./files/Homework_01_doc.docx).
