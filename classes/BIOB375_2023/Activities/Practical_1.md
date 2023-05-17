@@ -67,11 +67,11 @@ We can also use the formula directly:
 
 $$\chi^2_{Calculated} = \sum \frac{(observed - expected)^2}{expected}$$
 
-Then, we can find the $\chi^2$ in the table (\chi^2_{Table}) considering the number of degrees of freedom
+Then, we can find the $\chi^2$ in the table ($\chi^2_{Table}$) considering the number of degrees of freedom
 
 * Degrees of freedom: Number of categories - 1
     
-If $\chi^2_{Calculated} > \chi^2_{Table}$
+If $\chi^2_{Calculated} > \chi^2_{Table}$ :
 
 * $fo \neq fe$
     
