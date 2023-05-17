@@ -71,7 +71,7 @@ Then, we can find the $\chi^2$ in the table ($\chi^2_{Table}$) considering the n
 
 * Degrees of freedom: Number of categories - 1
     
-If $\chi^2_{Calculated}$ > $\chi^2_{Table}$ :
+If $$\chi^2_{Calculated}$$ > $$\chi^2_{Table}$$ :
 
 * $fo \neq fe$
     
