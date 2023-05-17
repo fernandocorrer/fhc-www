@@ -15,16 +15,57 @@ You received ears of corn with smooth and wrinkled seeds from an F2 generation. 
 
 After counting the number of seeds in each category, fill out the table. Remember that for the case we are testing, the expected ratio is 3:1. Then, let's calculate the $\chi^2$:
 
-| Category | Observed frequency (fo) | Expected frequency (fe) | $(fo - fe)$ | $(fo - fe)^2$ | $[(fo - fe)^2]/(fe)$ |
-|----------|-------------------------|-------------------------|-------------|---------------|----------------------|
-| Normal   |                         | 3/4n                    |             |               |                      |
-| Wrinkled |                         | 1/2n                    |             |               |                      |
-|          |  (n)                    |                         |             | -             | $\chi^2$=            |
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Category</th>
+    <th class="tg-0pky">Observed frequency (fo)</th>
+    <th class="tg-0pky">Expected frequency (fe)</th>
+    <th class="tg-0pky">$(fo - fe)$</th>
+    <th class="tg-0pky">$(fo - fe)^2$</th>
+    <th class="tg-0pky">$[(fo - fe)^2]/(fe)$</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky">Normal</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">3/4n</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky">Wrinkled</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">1/2n</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">(n)</td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky"></td>
+    <td class="tg-0pky">-</td>
+    <td class="tg-0pky">$\chi^2$=</td>
+  </tr>
+</tbody>
+</table>
 
 
 We can also use the formula directly:
 
-$$ \chi^2_{Calculated} = \sum \frac{(observed - expected)^2}{expected} $$
+$$\chi^2_{Calculated} = \sum \frac{(observed - expected)^2}{expected}$$
 
 Then, we can find the $\chi^2$ in the table (\chi^2_{Table}) considering the number of degrees of freedom
 
