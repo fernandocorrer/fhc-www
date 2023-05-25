@@ -38,7 +38,7 @@ After counting the number of seeds in each category, fill out the table. Remembe
   <tr>
     <td class="tg-0pky">Normal</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0pky">3/4n</td>
+    <td class="tg-0pky">(3/4 x n)</td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
@@ -46,7 +46,7 @@ After counting the number of seeds in each category, fill out the table. Remembe
   <tr>
     <td class="tg-0pky">Wrinkled</td>
     <td class="tg-0pky"></td>
-    <td class="tg-0pky">1/2n</td>
+    <td class="tg-0pky">(1/2) x n</td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
     <td class="tg-0pky"></td>
