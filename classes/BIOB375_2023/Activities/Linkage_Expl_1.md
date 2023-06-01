@@ -5,7 +5,7 @@ title: Linkage and Meiosis
 
 ## Meiosis, again ...
 
-Suppose a cross between two homozygous sugarcane lines generate a F1 progeny heterozygous for three recessive genes: U (abnormal leaf), o (susceptible to orange rust) and z (susceptible to sugarcane borer). The testcross of the F1 generation with complete recessive homozygous line generate
+Suppose a cross between two homozygous sugarcane lines generate a F1 progeny heterozygous for three recessive genes: u (abnormal leaf), o (susceptible to orange rust) and z (susceptible to sugarcane borer). The testcross of the F1 generation with complete recessive homozygous line generate
 
 *	355 abnormal leaf, 
 *	88 totally wild type - normal leaf, resistant to orange rust and resistant to the sugarcane borer, 
@@ -41,7 +41,7 @@ In both cases, Z is the gene that changes. Therefore, Z is the gene located in t
 
 $$\frac{OZu}{OZu} \times \frac{ozU}{ozU}$$
 
-We can look the following scheme to help us understand the origin of the gametes. There is an extra gene - H - but notice that it's independent from the other three genes. We will have four possible scenarios regarding the genes in the long chromosome: i) no crossing over; ii) a crossing over in between O and Z; iii) a crossing over in between Z and U; iv) two crosing overs. 
+We can look the following scheme to help us understand the origin of the gametes. There is an extra gene - H - but notice that it's independent from the other three genes. We will have four possible scenarios regarding the genes in the long chromosome: i) no crossing over; ii) a crossing over in between O and Z; iii) a crossing over in between Z and U; iv) two crossing overs. 
 
 <img width="80%" src='figures/linkage_meio.png'>
 
