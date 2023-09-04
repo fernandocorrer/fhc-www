@@ -17,7 +17,7 @@ avatar:           /theme/img/fhc_avatar.jpg   # Path to an avatar image
 baseurl: "/fhc-www"
 
 # Add a directory to hold misc pages, just to keep the root directory clean.
-include: ["_pages", "_portfolio"]
+include: ["_pages", "_portfolio", "_posts"]
 
 # Wire in the SASS files in the theme directory.
 sass:
@@ -42,10 +42,7 @@ collections:
     output: true
     title: classes
     permalink: /:collection/:name.html
-  classes:
-    output: true
-    title: posts
-    permalink: /:collection/:name.html
+
 
 defaults:
 # Turn the profile sidebar on for all pages by default, except for the
