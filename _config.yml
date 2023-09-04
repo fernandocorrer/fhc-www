@@ -42,6 +42,10 @@ collections:
     output: true
     title: classes
     permalink: /:collection/:name.html
+  classes:
+    output: true
+    title: posts
+    permalink: /:collection/:name.html
 
 defaults:
 # Turn the profile sidebar on for all pages by default, except for the
